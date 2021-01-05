@@ -1,0 +1,18 @@
+<canvas id = "mycanvas"> </canvas>
+<script>
+var mycanvas = document.createElement("canvas");
+mycanvas.id = "mycanvas";
+document.body.appendChild(mycanvas);
+
+var mycanvas = document.getElementById("mycanvas");
+var mycontext = mycanvas.getContext("2d");
+mycontext.beginPath();          // 드로잉 팬을 다시 잡는다(0,0 원점)
+mycontext.moveTo(10, 10);
+mycontext.lineTo(35, 35);   //  (10, 10)좌표에서 (35, 35)로 패스 설정
+mycontext.strockStyle = "#000";
+mycontext.stroke(); // 선 그린다.
+mycontext.beginPath();
+mycontext.arc(35, 35, 10, 0, Math.PI * 2, true);    // x좌표, y좌표, 반지름, x앵글, y앵글, 반시계방향
+mycontext.fillStyle = "#f00";
+mycontext.fill();           // 원에 색을 칠한다.
+</script>
