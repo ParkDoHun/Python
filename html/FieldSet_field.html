@@ -1,0 +1,31 @@
+<form>
+    <fieldset>
+        <legend>Store Credit Card</legend>
+        <p><label>Name displayed on your card: <input name="fullName" required>
+        </label></p>
+        <fieldset name="accountNum" disabled />
+        <legend>
+            <label>
+                <input type="radio" name="accountType"
+                onchange="form.accountNum.disabled=!checked;
+                form.accountLetters.disabled=checked">
+                My account is a 12-digit number
+            </label>
+        </legend>
+        <p><label>Store card number: <input name="cardNum" required></label></p>
+    </fieldset>
+    <fieldset name="accountLetters" disabled>
+        <legend>
+            <label>
+                <input type="radio" name="accountType"
+                onchange="form.accountLetters.disabled = !checked;
+                form.accountNum.disabled = checked">
+                My account includes letters and numbers
+            </label>
+        </legend>
+        <p><label>Store card code : <input name="cardLetters">
+        </label>
+    </p>
+    </fieldset>
+    </fieldset>
+</form>
