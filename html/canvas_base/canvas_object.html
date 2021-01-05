@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+    Image Object Demo
+</title>
+<script type="application/javascript">
+/* Image 오브젝트는 <img> 태그를 표현한 자바스크립트 오브젝트이다
+ * 자바스크립트에서 Image 오브젝트, <img> 태그, <canvas> 태그를 이용한 다양한 이미지 출력방법을 테스트해본다
+*/
+  
+// 이미지 파일을 로드하여 Image오브젝트를 생성하고 캔버스 등에 그린다
+function loadImage() {
+    var imageObj = new Image();
+    imageObj.onload = function(evt) {
+        drawCanvas(this);
+        //canvasToImg(this);
+        //dynamicCanvas(this);
+        //dynamicCanvasToImg(this);
+    };
+    imageObj.src = 'smile.png';
+}
+ 
+// Image오브젝트를 캔버스에 그린다
+function drawCanvas(imageObj) {
+    var canvas = document.getElementById('canvas1');
+    var context = canvas.getContext('2d');
+    context.drawImage(imageObj, 0,0);
+}
+ 
+// canvas에 그려진 이미지를 <img>태그에 그린다
+function canvasToImg(imageObj) {
+    var canvas = document.getElementById('canvas1');
+    var context = canvas.getContext('2d');
+    context.drawImage(imageObj,0,0);
+    var dataURL = canvas.toDataURL();
+    //console.log('dataURL:'+dataURL);
+    var img = document.getElementById('img1');
+    img.src = dataURL;
+}
+ 
+// 동적으로 생성된 canvas에 이미지를 그리고 화면에 출력한다
+function dynamicCanvas(imageObj) {
+    var canvas = document.createElement('canvas');
+    canvas.width = 300;
+    canvas.height = 300;
+    var context = canvas.getContext('2d');
+    context.drawImage(imageObj,0,0);
+    document.body.appendChild(canvas);
+}
+ 
+// 동적인 캔바스에 이미지를 그리고 이미지 태그에도 그린다
+function dynamicCanvasToImg(imageObj) {
+    var canvas = document.createElement('canvas');
+    canvas.width = 300;
+    canvas.height = 300;
+    var context = canvas.getContext('2d');
+    context.drawImage(imageObj,0,0);
+    var dataURL = canvas.toDataURL();
+    var img = document.getElementById('img1');
+    img.src = dataURL;
+}
+ 
+// 이미지 태그에 이미지를 그린다
+function imgTagDisplay() {
+    var imageObj = document.getElementById('img1');
+    imageObj.onload = function(evt){
+        //
+    }
+    imageObj.src = 'smile.png';
+}
+ 
+// 동적인 이미지 태그에 이미지를 그리고 화면에 출력한다
+function dynaImgTag() {
+    var imgTag = document.createElement('img');
+    var imageObj = new Image();
+    imageObj.onload = function(evt){
+        imgTag.src = this.src;
+        document.body.appendChild(imgTag);
+    }
+    imageObj.src = 'smile.png';
+}
+ 
+// 이미지 태그에 그려진 이미지를 캔바스에도 그린다
+function imgTagToCanvas() {
+    var imgTag = document.createElement('img');
+    var imageObj = new Image();
+    imageObj.onload = function(evt){
+        imgTag.src = this.src;
+        var canvas = document.getElementById('canvas1');
+        var context = canvas.getContext('2d');
+        context.drawImage(imgTag,0,0);
+    }
+    imageObj.src = 'smile.png';
+}
+ 
+// 캔바스에 그려진 이미지 데이터를 편집하여 다시 출력한다
+function canvasGetImageData() {
+    var imageObj = new Image();
+    imageObj.onload = function(evt) {
+        var canvas = document.getElementById('canvas1');
+        var context = canvas.getContext('2d');
+        context.drawImage(imageObj,0,0);
+         
+        //이미지 데이터 편집
+        var imageData = context.getImageData(0,0,imageObj.width, imageObj.height);
+        var data = imageData.data;
+        //alert('Size:'+data.length);
+        //var imgLen = imageObj.width * imageObj.height;
+        for(var y=0; y<imageObj.height; y++) {
+            for(var x=0; x<imageObj.width; x++){
+                /*
+                var red = data[y*imageObj.width*4+(x*4)+0];
+                var green = data[y*imageObj.width*4+(x*4)+1];
+                var blue = data[y*imageObj.width*4+(x*4)+2];
+                var alpha = data[y*imageObj.width*4+(x*4)+3];
+                */
+                // 이미지의 절반은 투명하게 처리한다
+                if(y>imageObj.height/2)
+                    data[y*imageObj.width*4+(x*4)+3] = 0;
+            }
+        }
+        alert('이미지의 절반을 투명하게 설정합니다');
+        context.putImageData(imageData,0,0);
+    };
+    imageObj.src = 'smile.png';
+}
+ 
+// 파일박스에 선택된 이미지 파일을 로드하여 이미지 태그에 그린다
+function previewImage(files) {
+    var img = document.createElement("img");
+    //FileReader를 이용한 이미지 파일로드
+    var fileReader = new FileReader();
+    fileReader.onload = function(evt){
+        img.src = evt.target.result; //혹은 아래 라인처럼...
+        //img.src = window.URL.createObjectURL(files[0]);
+        document.body.appendChild(img);
+    }
+    fileReader.readAsDataURL(files[0]);
+}
+ 
+// WebSocket 을 통해서 이미지파일을 수신할 때 Blob 형으로 수신된 경우 미리보기
+// window.URL.createObjectURL(param); // param은 File오브젝트나 Blob 오브젝트
+function blobPreviewImage(blob) {
+    var img = document.createElement("img");
+    img.src = window.URL.createObjectURL(blob);
+    document.body.appendChild(img);
+}
+ 
+</script>
+</head>
+<body>
+<input type="button" value="확 인" onclick="canvasGetImageData();"><br>
+<img id='img1'><br>
+<canvas id="canvas1" width="600" height="400"> </canvas><br>
+<input type="file" multiple onchange="previewImage(this.files);">
+</body>
+</html>

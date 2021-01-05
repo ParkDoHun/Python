@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function bodyFunction()
+            {
+                alert("3rd PAge is loaded");
+            }
+
+            function loadImage()
+            {
+                alert("1st Image is loaded");
+            }
+
+            window.onload = function(){
+                alert("2nd window onload");
+            }
+        </script>
+    </head>
+    <body onload = "bodtFunction()">
+    <img src="http://www.google.co.kr/logos/doodles/2020/december-holidays-days-2-30-6753651837108830.3-law.gif"
+    onload = "loadImage()" width = 300" height = "132">
+    </body>
+</html>

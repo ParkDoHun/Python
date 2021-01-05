@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <title>draw_canvas</title>
+
+    <body>
+        <canvas width = "600" height = "800" id = "canvas">
+            이 브라우저는 canvas를 지원하지 않습니다.
+        </canvas>
+
+        <script>
+            var canvas = document.getElementsByTagName('canvas');
+            var context = canvas[0].getContext('2d');
+
+            var L = 13, T = 434, R = 1402, B = 1145;
+            var scale;
+
+            var img = new Image; // Image = img객체 생성 및 동적으로 이미지 생성
+            img.src = "https://s.pstatic.net/static/www/mobile/edit/2020/1228/mobile_194105722419.png";
+
+            img.onload = function()
+            {
+                // context.canvas.width = img.width;
+                scale = (600/img.width);
+                L = L * scale;
+                R = R * scale;
+                T = T * scale;
+                B = B * scale;
+
+                context.canvas.height = img.height*scale;
+                context.drawImage(img, 0,0, context.canvas.width, context.canvas.height)
+                context.beginPath();
+                context.lineWidth = 2;
+                context.strokeStyle = 'blue';
+                context.moveTo(L, T);
+                context.lineTo(R ,T);
+                context.lineTo(R ,B);
+                context.lineTo(L ,B);
+                context.closePath();
+                context.stroke();
+            }
+        </script>
+
+    </body>
+</html>
