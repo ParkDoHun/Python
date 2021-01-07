@@ -1,4 +1,4 @@
-<canvas id = "mycanvas"> </canvas>
+<canvas id = "mycanvas" width="300" height="300"> </canvas>
 <script>
 var mycanvas = document.createElement("canvas");
 mycanvas.id = "mycanvas";
@@ -15,4 +15,9 @@ mycontext.beginPath();
 mycontext.arc(35, 35, 10, 0, Math.PI * 2, true);    // x좌표, y좌표, 반지름, x앵글, y앵글, 반시계방향
 mycontext.fillStyle = "rgba(255, 0, 0, 0.5)";       // 2021-01-07 -> 투명도 적용
 mycontext.fill();           // 원에 색을 칠한다.
+
+window.onresize = function() { // 이벤트 발생시 도화지를 새로 바꿈
+    mycanvas.width = document.documentElement.clientWidth;
+    mycanvas.height = document.documentElement.clientHeight;
+}
 </script>

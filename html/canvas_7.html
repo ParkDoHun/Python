@@ -1,0 +1,19 @@
+<canvas id = "mycanvas"> </canvas>
+<script>
+var mycanvas = document.createElement("canvas");
+mycanvas.id = "mycanvas";
+document.body.appendChild(mycanvas);
+
+var mycanvas = document.getElementById("mycanvas");
+var mycontext = mycanvas.getContext("2d");
+    mycontext.beginPath();
+    mycontext.arc(40, 40, 25, 0, Math.PI * 2, true); // 원을 그립니다.
+    mycontext.closePath();
+    mycontext.fillStyle = "#f00";
+    mycontext.fill(); // 원에 색을 칠합니다.
+    mycontext.beginPath(); // 팬을 다시 잡습니다.
+    mycontext.arc(70, 40, 25, 0, Math.PI * 2, true); // 원을 그립니다.
+    mycontext.closePath();
+    mycontext.fillStyle = "rgba(0, 0, 255, 0.75)"; // a는 투명도
+    mycontext.fill(); // 원에 색을 칠합니다.
+</script>
