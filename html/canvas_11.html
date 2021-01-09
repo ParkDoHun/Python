@@ -1,0 +1,23 @@
+<!--외부에서 이미지 불러오기-->
+<canvas id = "mycanvas" > </canvas>
+
+<script>
+    var mycanvas = document.createElement("canvas");
+    mycanvas.id = "mycanvas";
+    document.body.appendChild(mycanvas);
+
+    var mycanvas = document.getElementById("mycanvas");
+    var mycontext = mycanvas.getContext("2d");
+    
+    var img = new Image();
+    img.src = "http://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"; // 구글 이미지
+
+    // 이미지 그리기
+
+    var img = new Image();
+    img.onload = function() {
+        // 코드에 나타나진 않았지만 2d 컨텍스트에서 호출합니다.
+        mycontext.drawImage(img, 0, 0); // (0, 0)좌표에 이미지를 그립니다.
+    };
+    img.src = "http://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png";
+</script>

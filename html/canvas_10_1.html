@@ -1,0 +1,21 @@
+<!--선 스타일 1-->
+<canvas id = "mycanvas" > </canvas>
+
+<script>
+var mycanvas = document.createElement("canvas");
+mycanvas.id = "mycanvas";
+document.body.appendChild(mycanvas);
+
+var mycanvas = document.getElementById("mycanvas");
+var mycontext = mycanvas.getContext("2d");
+
+mycontext.beginPath();
+mycontext.lineWidth = '10';
+mycontext.lineCap = 'butt'; // 기본값(꼭지점)
+mycontext.lineJoin = 'miter'; // 기본값
+mycontext.moveTo(70, 120);
+mycontext.lineTo(90, 60);
+mycontext.lineTo(110, 120);
+mycontext.strokeStyle = '#000';
+mycontext.stroke();
+</script>
