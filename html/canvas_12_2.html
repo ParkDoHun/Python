@@ -1,0 +1,22 @@
+<!--좌표계 수정-->
+<canvas id = "mycanvas"></canvas>
+
+<script>
+    var mycanvas = document.createElement("canvas");
+    mycanvas.id = "mycanvas";
+    document.body.appendChild(mycanvas);
+
+    var mycanvas = document.getElementById("mycanvas");
+    var mycontext = mycanvas.getContext("2d");
+
+    mycontext.save();
+    mycontext.translate(10, 0);                     // 좌표계를 오른쪽으로 10픽셀 움직입니다.
+    mycontext.moveTo(0, 0);
+    mycontext.lineTo(50, 0);                        // 선은 (10, 0)부터 (60, 0)까지 그려집니다.
+    mycontext.stroke();
+    mycontext.restore();
+    mycontext.moveTo(10, 0);
+    mycontext.lineTo(60, 0);                        // 같은 선입니다.
+    mycontext.stroke();
+
+</script>

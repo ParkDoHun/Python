@@ -1,0 +1,30 @@
+<!--선 확대-->
+<canvas id = "mycanvas"></canvas>
+
+<script>
+    var mycanvas = document.createElement("canvas");
+    mycanvas.id = "mycanvas";
+    document.body.appendChild(mycanvas);
+
+    var mycanvas = document.getElementById("mycanvas");
+    var mycontext = mycanvas.getContext("2d");
+
+    mycontext.save();
+    mycontext.scale(2, 1);          // x 방향으로 2배 확대합니다.
+    mycontext.moveTo(0, 0);
+    mycontext.lineTo(50, 0);        // 선은 실제로 (100, 0)까지 그립니다.
+    mycontext.stroke();
+    mycontext.restore();
+    mycontext.moveTo(0 ,0);
+    mycontext.lineTo(100, 0);       // 같은 선입니다.
+    mycontext.stroke();
+    
+    
+    /*
+    mycontext.save();
+    mycontext.rotate(Math.PI / 4);  // 시계방향으로 45도만큼 회전합니다.
+    mycontext.drawImage(img, 0, 0); // 회전한 좌표계의 (0, 0)에 이미지를 그립니다.
+    mycontext.restore();
+    */
+
+</script>

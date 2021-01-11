@@ -1,0 +1,31 @@
+<!--좌표게 변형과 캔버스 상태 스택 관리-->
+<canvas id = "mycanvas"></canvas>
+
+<script>
+    var mycanvas = document.createElement("canvas");
+    mycanvas.id = "mycanvas";
+    document.body.appendChild(mycanvas);
+
+    var mycanvas = document.getElementById("mycanvas");
+    var mycontext = mycanvas.getContext("2d");
+
+    mycontext.beginPath();
+    mycontext.strokeStyle = "#f00";         // 빨간색
+    mycontext.translate(20, 20);            // 원점을 (20, 20)만큼 이동합니다.
+    mycontext.moveTo(0, 0);                 // 실제로는 (20, 20)입니다.
+    mycontext.lineTo(80, 10);               // 실제로는 (100, 30)입니다.
+    mycontext.stroke();
+    mycontext.save();                       // 현 상태를 저장합니다.
+    mycontext.beginPath();
+    mycontext.strokeStyle = "#00f";         // 이제 파란색입니다.
+    mycontext.rotate(Math.PI / 4);
+    mycontext.moveTo(0, 0);
+    mycontext.arc(0, 0, 52, Math.PI / 3, Math.PI / 6, true);
+    mycontext.closePath();                  // 패스 처음으로 다시 연결합니다.
+    mycontext.stroke();
+    mycontext.restore();                    // 이전 상태로 돌아갑니다.
+    mycontext.beginPath();
+    mycontext.moveTo(80, 10);
+    mycontext.lineTo(14, 50);
+    mycontext.stroke();
+</script>

@@ -1,0 +1,23 @@
+<!--위치 변형-->
+<canvas id = "mycanvas"></canvas>
+
+<script>
+    var mycanvas = document.createElement("canvas");
+    mycanvas.id = "mycanvas";
+    document.body.appendChild(mycanvas);
+
+    var mycanvas = document.getElementById("mycanvas");
+    var mycontext = mycanvas.getContext("2d");
+
+    mycontext.save();                               // 캔버스의 현재 상태를 저장
+    mycontext.translate(10, 10);                    // 좌표계 원점을 (10, 10)으로 이동합니다.
+    mycontext.arc(0, 0, 10, 0, Math.PI * 2, true);  // 원을 그립니다.
+    mycontext.stroke();
+    mycontext.restore();                            // 이전에 사용한 스타일을 불러옵니다.
+    mycontext.save();
+    mycontext.rotate(Math.PI / 4);                  // 시계방향으로 45도만큼 회전합니다.
+    mycontext.moveTo(0, 0);
+    mycontext.lineTo(10, 0);
+    mycontext.stroke();
+    mycontext.restore();
+    </script>

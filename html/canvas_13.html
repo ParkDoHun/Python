@@ -1,0 +1,16 @@
+<!--캔버스 텍스트-->
+<canvas id = "mycanvas"></canvas>
+
+<script>
+    var mycanvas = document.createElement("canvas");
+    mycanvas.id = "mycanvas";
+    document.body.appendChild(mycanvas);
+
+    var mycanvas = document.getElementById("mycanvas");
+    var mycontext = mycanvas.getContext("2d");
+
+    mycontext.font = "25pt Arial";              // "크기, 글꼴"
+    mycontext.fillText("Hello World", 0, 25);   // 채워진 텍스트
+    mycontext.strokeText("Hello World", 0, 75); // 윤곽선 텍스트
+
+</script>

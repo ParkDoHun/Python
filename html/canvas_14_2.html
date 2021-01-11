@@ -1,0 +1,22 @@
+<!--그림 자르기-->
+<canvas id = "mycanvas"></canvas>
+
+<script>
+    var mycanvas = document.createElement("canvas");
+    mycanvas.id = "mycanvas";
+    document.body.appendChild(mycanvas);
+
+    var mycanvas = document.getElementById("mycanvas");
+    var mycontext = mycanvas.getContext("2d");
+
+    mycontext.save();
+    mycontext.beginPath();
+    mycontext.arc(50, 50, 25, 0, Math.PI * 2, true);        // 원형 패스
+    mycontext.clip();                                       // 이 패스를 클립 마스크로 설정합니다.
+    mycontext.fillStyle = "#f00";
+    mycontext.font = "50pt Arial";
+    mycontext.fillText("H", 25, 75);
+    mycontext.restore();                                    // 클리핑이 설정되지 않은 기본 상태로 돌아갑니다.
+    mycontext.font = "25pt Arial";
+    mycontext.fillText("ello World", 70, 70);               // 이 텍스트는 잘리지 않습니다.
+</script>
