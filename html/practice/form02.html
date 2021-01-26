@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<metahtml lang = 'ko'>
+    <body>
+        <h1>체크박스</h1>
+        <p>01. 다음 중 재밌고 내용이 알찬 강좌를 모두 골라주세요.</p>
+        <form action="testServer" method="GET">
+
+        <fieldset>
+            <legend>language</legend>
+            <input type="checkbox" name="testButton" value="html" checked>HTML<br>
+            <input type="checkbox" name="testButton" value="css">CSS<br>
+            <input type="checkbox" name="testButton" value="java">JAVA <br>
+            <input type="checkbox" name="testButton" value="c++">C++<br>
+            <button type="submit" onclick="alert('testServer로 내용을 제출합니다.')">Submit</button>
+        </fieldset>
+
+        <textarea name="message" rows="7" cols="40" placeholder="메세지를 입력하세요"></textarea><br>
+        <input type="file" name="UploadFile" accept="image/*"><br><br>
+    </form>
+
+    <a href="http://www.google.com" target="_self">Go google</a>
+    </body>
+
+</metahtml>
