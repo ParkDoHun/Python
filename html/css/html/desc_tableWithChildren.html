@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Selector Basic</title>
+    <style>
+        table > tr > th {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">      <!--스타일 속성은 적용되지 않는다.-->
+        <tr>                <!--웹 브라우저가 tbody 태그를 자동으로 추가한다고 한다.-->
+            <th>이름</th>   <!--색상을 적용하려면 선택자 table > tbody > tr > th를 사용-->
+            <th>지역</th>
+        </tr>
+        <tr>
+            <td>박도훈</td>
+            <td>충청북도 제천시</td>
+        </tr>
+    </table>
+</body>
+</html>
