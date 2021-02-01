@@ -1,0 +1,3 @@
+testOpen, 낙타표기법(카멜표기법)
+read(size), 바이트 수(size) 만큼 읽는다.
+textRead, 낙타표기법 입니다.
