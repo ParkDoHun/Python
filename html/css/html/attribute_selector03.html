@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* h1 요소 중에 title 애트리뷰트 값에 "first"를 단어로 포함하는 요소 */
+        /* 
+        - 셀렉터[애트리뷰트~="값"] : 지정된 애트리뷰트의 값이 지정된 값을
+        (공백으로 분리된)단어로 포함하는 요소를 선택한다.
+        */
+        h1[title~="first"] { color: red; }
+    </style>
+</head>
+<body>
+    <h1 title="heading first">Heading first</h1>
+    <h1 title="heading-first">Heading-first</h1>
+    <h1 title="heading second">Heading second</h1>
+    <h1 title="heading third">Heading third</h1>
+</body>
+</html>
