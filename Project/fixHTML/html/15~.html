@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+<!--------------문항-------------->
+<div class="table">
+    <div class="row">
+        <span class="cell col0"><script>document.write(number); number +=1;</script></span>
+        <span class="cell col3">직접 학생을 가르치는 것 보다는 수업 방식이나 교육 이론, 정책을 연구해보고 싶다.</span>
+    </div>
+</div>
+    <div class="table">
+        <div class="row">
+        <span class="cell survaysname1">
+            <input type="radio" name="survay1" value="1" />-2
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay1" value="2" />-1
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay1" value="3" />0
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay1" value="4" />1
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay1" value="5" />2
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<div class="table">
+    <div class="row">
+        <span class="cell col0"><script>document.write(number); number +=1;</script></span>
+        <span class="cell col3">화학에도 관심이 많고 물체의 운동을 다루는 물리에도 관심이 많다.</span>
+    </div>
+</div>
+    <div class="table">
+        <div class="row">
+        <span class="cell survaysname1">
+            <input type="radio" name="survay2" value="1" />-2
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay2" value="2" />-1
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay2" value="3" />0
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay2" value="4" />1
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay2" value="5" />2
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+
+
+<div class="table">
+    <div class="row">
+        <span class="cell col0"><script>document.write(number); number +=1;</script></span>
+        <span class="cell col3">다양한 건축물을 설계하거나 만드는 방법에 대해 배우고 싶다.</span>
+    </div>
+</div>
+    <div class="table">
+        <div class="row">
+        <span class="cell survaysname1">
+            <input type="radio" name="survay3" value="1" />-2
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay3" value="2" />-1
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay3" value="3" />0
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay3" value="4" />1
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay3" value="5" />2
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="table">
+    <div class="row">
+        <span class="cell col0"><script>document.write(number); number +=1;</script></span>
+        <span class="cell col3">치과에서 하는 치료나 수술을 보면 직접 해보고 싶다는 생각이 든다.</span>
+    </div>
+</div>
+    <div class="table">
+        <div class="row">
+        <span class="cell survaysname1">
+            <input type="radio" name="survay4" value="1" />-2
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay4" value="2" />-1
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay4" value="3" />0
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay4" value="4" />1
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay4" value="5" />2
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<script>
+    document.write(localStorage.getItem("allEntries"));
+</script>
+
+<button type="button" class="survay-btn" onclick="previous_Page(2, 4, number-8)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(2, count, number)">다음</button>
+
+</body>
+</html>

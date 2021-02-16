@@ -1,0 +1,84 @@
+
+/*header*/
+header {
+    border-bottom: 1px solid rgba(0, 0, 0,0.3);
+}
+header .inner {
+    max-width: 980px;
+    height: 100px;
+    margin: 0 auto;
+}
+.img-logo {
+    padding: 15px;
+}
+
+.parent {
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+}
+
+.botton-left {
+    flex:1;
+    margin: 0px 5%;
+    width:300px;
+    box-sizing: border-box;
+}
+
+.botton-center {
+    flex:1;
+    margin: 0px 5%;
+    width:300px;
+    box-sizing: border-box;
+}
+
+.botton-right {
+    flex:1;
+    margin: 0px 5%;
+    width:300px;
+    box-sizing: border-box;
+}
+
+.botton1{
+    width: 255px;
+    border: 3px solid skyblue;
+    padding:50px 20px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: skyblue;
+
+}
+.botton2{
+    width: 255px;
+    border: 3px solid skyblue;
+    padding:20px 20px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: skyblue;
+}
+
+
+.botton1:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+.botton2:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+.botton1:hover {
+   color: white;
+   background-color: skyblue;
+}
+
+.botton2:hover {
+   color: white;
+   background-color: skyblue;
+}
+
+.text {
+    margin-top: 20px;
+}
