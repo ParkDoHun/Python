@@ -4,6 +4,7 @@
     <meta charset="UTF-8">   
 
     <title>end</title>
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
 </head>
 <body>
     <fieldset>
@@ -12,9 +13,13 @@
     만큼 정확한 결과를 위해 모든 문항에 답을 표시하였는지 확인하신 뒤 검사지와 답안지를 제출해 주세요.
     </fieldset>
     <form action="../JSP/sendResult.jsp" method=post>
-        <input id = "checkData" type="hidden" name="check" value=""/>
-        <input type="submit" value = "전송"/>
+        <input id = "checkData" type="hidden" name="check" value="" />
+        <input type="submit" value = "전송" />
      </form>
+
+     <script>
+         dataSend();
+     </script>
 </body>
 </html>
 
