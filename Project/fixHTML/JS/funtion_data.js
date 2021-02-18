@@ -134,11 +134,12 @@ function main_page(){
 }
 
 // 저장된 데이터 JSP에 전달
-$(function dataSend(){
+function dataSend(){
     var gt = localStorage.getItem("allEntries");
     document.getElementById("checkData").value = gt;
-    return gt;
- });
+
+    console.log(gt);
+ };
 
 // 저장된 세션 삭제
 function clearSesstion(){

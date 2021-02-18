@@ -15,7 +15,6 @@
 <body>
 
 	<%
-		getData;
 		connectServer connect = connectServer.getInstance();
 		//int[] result = request.getParameterValues("survay2");
 		//String UID = request.getParameter("UID");
