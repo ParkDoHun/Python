@@ -5,10 +5,11 @@
 .table_ex {display: table; width: 100%; font-size: 14px;}
 .table {display: table; width: 100%;}
 .row {display: table-row;}
+.row2 {display: table-row; padding: 1px;}
 /*문항이 3개일때*/
 .cell {display: table-cell; padding: 10px; border: 0.5px solid black}
 /*문항이 4개일때*/
-.cell2 {display: table-cell; padding: 12x; background-color: rgba(197, 195, 195, 0.40);}
+.cell2 { /*padding: 12px;*/ background-color: rgba(197, 195, 195, 0.40); display: table-cell; }
 .col0{
     width: 2%;
     text-align: center;
