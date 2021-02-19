@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Property Basic</title>
+    <style>
+        /* div 요소의 자식요소 중 p 요소 */
+        /*
+        - 셀렉터A > 셀렉터B
+        */
+        div > p { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Heading</h1>
+    <div>
+        <p>paragraph 1</p>
+        <p>paragraph 2</p>
+        <span><p>paragraph 3</p></span>     <!-- p 태그 = 후손 -->
+    </div>
+        <p>paragraph 4</p>
+    </div>
+</body>
+</html>
