@@ -5,11 +5,12 @@
 .table_ex {display: table; width: 100%; font-size: 14px;}
 .table {display: table; width: 100%;}
 .row {display: table-row;}
-.row2 {display: table-row; padding: 1px;}
 /*문항이 3개일때*/
 .cell {display: table-cell; padding: 10px; border: 0.5px solid black}
+
 /*문항이 4개일때*/
-.cell2 { /*padding: 12px;*/ background-color: rgba(197, 195, 195, 0.40); display: table-cell; }
+.cell2 {/* padding: 12px;*/ background-color: rgba(197, 195, 195, 0.40); display: table-cell;}
+
 .col0{
     width: 2%;
     text-align: center;
@@ -31,7 +32,7 @@
     width: 10%;
     font-weight: 100;
 }
-.survaysname1 {
+.survaysname1{
     /*flex: 1;*/
     width: 20%;
     text-align: center;
@@ -64,7 +65,7 @@ header {
 .cell3 {
     color :navy;
     text-align: center;
-    width: 48%;
+    width: 46%;
     float: left;
     font-weight: 600;
   }
@@ -72,13 +73,55 @@ header {
   .cell4 {
     color :navy;
     text-align: center;
-    width: 48%;
+    width: 46%;
     float: right;
     font-weight: 600;
   }
 
   .cell5 {
-    width: 2%;
+    width: 5%;
     float: left;
     margin: 0;
   }
+
+  body{
+      border: 1px solid black;
+      padding: 1%;
+      max-height: 1280px;
+      max-width: 800px;
+      box-sizing: border-box;
+  }
+
+ .p1 {
+    background-color: white;
+    margin: 0;
+    color: black;
+    
+  }
+
+  input[type="radio"]{
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    border: 1px solid black;
+  }
+
+  input[type="radio"]:checked{
+      box-shadow: inset 0 0 0 20px rgba(255, 0, 0, 0.2);
+      background-color: black;
+    }
+
+    fieldset {
+        font-weight: bold;
+    }
+
+
+/*테스트
+.cell_check:hover {
+    background-color: yellow;
+}
+.cell_check:active {
+    background-color: rgba(218, 36, 218, 0.6);
+}
+*/
