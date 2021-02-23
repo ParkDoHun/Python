@@ -1,0 +1,80 @@
+<script>
+var date = new Date();
+var month = date.getMonth();
+
+// 조건문
+if (3 <= month && month <= 5) {
+    alert('봄 입니다.');
+} else if (6 <= month && month <= 8) {
+    alert('여름 입니다.');
+} else if (9 <= month && month <= 11) {
+    alert('가을 입니다.');
+} else {
+    alert('겨울 입니다.');
+}
+
+// 문자 1000번 출력하기
+for (var i = 0; i < 3; i++) {
+    alert('3번 출력');
+}
+
+// 요소 출력하기
+var array = [273, '문자열..', true, function () { }, {}, [233, 34]];
+alert(array);
+
+// 배열 생성과 배열 요소 접근
+var array1 = ['박', '도', '훈', '입', '니', '다'];
+// 배열 요소를 변경
+array1[0] = '윤';
+array1[1] = '삼';
+array1[2] = '행';
+array1[3] = '시';
+// 요소 출력
+alert(array1[0]);
+alert(array1[1]);
+alert(array1[2]);
+alert(array1[3]);
+alert(array1[4]);
+alert(array1[5]);
+
+
+// 요소 길이
+var array2 = [10, 20, 30, 40, 50];
+alert(array2.length);
+
+
+// while 반복문1
+while(true) {
+    alert('while');
+    break;
+}
+
+// while 반복문2
+var i = 0;
+var array3 = ['박', '도', '훈'];
+
+while(i < array3.length) {
+    alert(array3[i]);
+    i++;
+}
+
+
+
+// for 반복문
+var array4 =  ['박', '도', '훈'];
+
+for (var i = 0; i < array4.length; i++) {
+    alert(i + '번째 값 : ' + array4[i]);
+}
+
+
+// 반복문 조건을 외부 요인으로 변경
+var start = new Date().getTime();
+var count = 0;
+
+while (start + 1000 > new Date().getTime()) {
+    count++;    
+}
+alert(count + '번 반복 했어요.');
+
+</script>
