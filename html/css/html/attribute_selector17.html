@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Property Basic</title>
+    <style>
+        /* 정합성 검증이 성공한 input 요소 또는 form 요소를 선택한다. */
+        input[type="text"]:valid {
+            background-color: greenyellow;
+        }
+
+        /* 정합성 검증이 실패한 input 요소 또는 form 요소를 선택한다. */
+        input[type="text"]:invalid {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <label>입력값이 반드시 필요
+        <input type="text" required>
+    </label>
+    <br>
+    <label>특수문자를 포함하지 않는 4자리 문자 또는 숫자
+        <input type="text" value="time" pattern="[a-zA-Z0-9]{4}" required>
+    </label>
+    <br>
+    <label>핸드폰 번호 형식
+        <input type="text" placeholder="010-xxxx-xxxx" pattern="^\d{3}-\d{3,4}-\d{4}$" required>
+    </label>
+</body>
+</html>

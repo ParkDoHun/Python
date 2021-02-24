@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Property Basic</title>
+    <style>
+        /* ol 요소의 자식 요소인 li 요소 중 짝수번째 요소만을 선택 */
+        ol > li:nth-child(2n)   { color: orange; }
+        /* ol 요소의 자식 요소인 li 요소 중 홀수번째 요소만을 선택 */
+        ol > li:nth-child(2n+1) { color: red; }
+        /* ol 요소의 자식 요소인 li 요소 중 첫번째 요소만을 선택 */
+        ol > li:first-child     { font-weight: bold; }
+        /* ol 요소의 자식 요소인 li 요소 중 마지막 요소만을 선택 */
+        ol > li:last-child      { color: brown; }
+
+        /* ol 요소의 자식 요소인 li 요소 중 4번째 요소만을 선택 */
+        ol > li:nth-child(4)    {background: yellow;}
+
+        /* ul 요소의 모든 자식 요소 중에서 뒤에서부터 시작하여 홀수번째 요소만을 선택 */
+        ul > :nth-last-child(2n+1)  { color: blue; }
+        /* ul 요소의 모든 자식 요소 중에서 뒤에서부터 시작하여 짝수번째 요소만을 선택 */
+        ul > :nth-last-child(2n)    { color:green; }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Espresso</li>
+        <li>Americano</li>
+        <li>Caffe Latte</li>
+        <li>Caffe Mocha</li>
+        <li>Caramel Latte</li>
+        <li>Cappuccino</li>
+      </ol>
+    
+      <ul>
+        <li>Espresso</li>
+        <li>Americano</li>
+        <li>Caffe Latte</li>
+        <li>Caffe Mocha</li>
+        <li>Caramel Latte</li>
+        <li>Cappuccino</li>
+      </ul>
+</body>
+</html>
