@@ -1,0 +1,10 @@
+<!--함수 우선 순위-->
+<script>
+    // 함수를 선언
+    // JS는 코드를 읽기전에 선언적 함수를 먼저 읽는다.
+    var func = function () { alert('함수_A') }; // 익명 함수
+    function func() { alert('함수_B'); };       // 선언적 함수
+
+    // 함수를 호출합니다.
+    func();
+</script>
