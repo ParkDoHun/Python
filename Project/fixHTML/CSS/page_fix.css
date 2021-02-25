@@ -56,8 +56,8 @@ header {
     border : 1px;
     padding: 10px;
     background-color: rgba(27, 156, 196, 0.6);
-    height: 40px;
-    font-size: 29px;
+    height: 30px;
+    font-size: 23px;
     font-weight: 600;
     color: white;
 }
@@ -65,7 +65,7 @@ header {
 .cell3 {
     color :navy;
     text-align: center;
-    width: 46%;
+    width: 43%;
     float: left;
     font-weight: 600;
   }
@@ -79,9 +79,19 @@ header {
   }
 
   .cell5 {
-    width: 5%;
+    width: 4%;
     float: left;
     margin: 0;
+  }
+  
+  .cell6 {
+      float: left;
+      position: relative;
+      width: 5px;
+      left: 3%;
+    height: 42px;
+    margin-left: 0;
+    background: rgba(82, 85, 82, 0.2);
   }
 
   body{
@@ -115,6 +125,10 @@ header {
     fieldset {
         font-weight: bold;
     }
+
+fieldset {
+    background-color: rgba(0, 233, 250, 0.349)
+}
 
 
 /*테스트
