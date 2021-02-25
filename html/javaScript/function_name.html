@@ -7,4 +7,14 @@
 
     // 출력
     alert(typeof func + ' : ' + func);
+
+    var foo = function(a, b) {
+        return a * b;
+    };
+    // 변수 bar와 변수 foo는 동일한 익명 함수의 참조값을 갖는다.
+    var bar = foo;
+
+    console.log(foo(10, 10)); // 100
+    console.log(bar(10, 10)); // 100
+
 </script>

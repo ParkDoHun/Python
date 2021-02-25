@@ -1,0 +1,21 @@
+<script>
+    // 기명 함수 표현식
+    var foo = function multi(primeA, primeB) {
+        return primeA * primeB;
+    };
+
+    function multi1(primeA, primeB) {
+        return primeA * primeB;
+    };
+
+
+    // 익명 함수 표현식
+    var bar = function (primeA, primeB) {
+        return primeA * primeB;
+    };
+
+    console.log(foo(10, 20));   // 200
+    console.log(bar(10, 5));    // 50
+    console.log(multi1(30, 5)); // 150
+    console.log(multi(10, 5));  // Uncaught ReferenceError: multi is not defined
+</script>
