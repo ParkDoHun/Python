@@ -2,14 +2,24 @@
 /*
 수정된 틀
 */
-.table_ex {display: table; width: 100%; font-size: 14px;}
+.table_ex {
+    display: table;
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid black;
+    }
 .table {display: table; width: 100%;}
 .row {display: table-row;}
-/*문항이 3개일때*/
-.cell {display: table-cell; padding: 10px; border: 0.5px solid black}
+
+/* 예시 문구 */
+.cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid black;
+}
 
 /*문항이 4개일때*/
-.cell2 {/* padding: 12px;*/ background-color: rgba(197, 195, 195, 0.40); display: table-cell;}
+.cell2 {/* padding: 12px;*/ background-color: rgba(96, 96, 96, 0.5) ; display: table-cell;}
 
 .col0{
     width: 2%;
@@ -24,13 +34,14 @@
     text-align: center;
 }
 
-.col3 {width: 100%;
-    font-weight: 100;
+.col3 {
+    width: 100%;
+    font-weight: bold;
 }
 
 .col4 {
     width: 10%;
-    font-weight: 100;
+    font-weight: bold;
 }
 .survaysname1{
     /*flex: 1;*/
@@ -64,7 +75,7 @@ header {
 
 .cell3 {
     color :navy;
-    text-align: center;
+    text-align: left;
     width: 43%;
     float: left;
     font-weight: 600;
@@ -72,7 +83,7 @@ header {
   
   .cell4 {
     color :navy;
-    text-align: center;
+    text-align: left;
     width: 46%;
     float: right;
     font-weight: 600;
@@ -85,10 +96,10 @@ header {
   }
   
   .cell6 {
-      float: left;
-      position: relative;
-      width: 5px;
-      left: 3%;
+    float: left;
+    position: relative;
+    width: 5px;
+    left: 3%;
     height: 42px;
     margin-left: 0;
     background: rgba(82, 85, 82, 0.2);
@@ -96,17 +107,18 @@ header {
 
   body{
       border: 1px solid black;
-      padding: 1%;
-      max-height: 1280px;
-      max-width: 800px;
-      box-sizing: border-box;
+      padding: 0.6%;
+      padding-bottom: 0.1%;
+      max-height: auto;
+      max-width: 1280px;
+      box-sizing: border-box ;
   }
 
  .p1 {
     background-color: white;
     margin: 0;
     color: black;
-    
+    padding-bottom: 10px;
   }
 
   input[type="radio"]{
@@ -122,14 +134,15 @@ header {
       background-color: black;
     }
 
-    fieldset {
-        font-weight: bold;
-    }
-
 fieldset {
-    background-color: rgba(0, 233, 250, 0.349)
+    background-color:  rgba(214, 224, 120, 0.185);
+    font-weight: bold;
 }
 
+legend {
+    text-align: center;
+    font-weight: 900;
+}
 
 /*테스트
 .cell_check:hover {
