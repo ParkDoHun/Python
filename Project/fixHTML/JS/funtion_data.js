@@ -52,13 +52,13 @@ function next_Page(tid, count, number) {
     // 두 가지 항목이 체크되어 있지 않으면 알람 후 재입력 유도
     if ( question_cnt != 0 ){
         if(chk_cnt<3){
-            alert('체크하세요');
+            alert('체크되지 않은 문항이 있습니다.');
             return;
         }
     }
     else{
         if(chk_cnt<4){
-            alert('체크하세요');
+            alert('체크되지 않은 문항이 있습니다.');
             return;
         }
     }
