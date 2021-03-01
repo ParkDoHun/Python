@@ -1,0 +1,19 @@
+<script>
+    
+    // 객체 선언
+    var person = {
+        name: 'ParkDohun',
+        eat: function (food) {
+
+            alert(this.name + '이 ' + food + '을(를) 먹습니다.');
+
+            /* C++, 자바, C# 등 프로그래밍 언어에서는 this를 생략할 수 있지만
+            JS에서는 this 키워드를 사용하지 않으면 오류 발생 */
+
+            /* this는 글로벌객체, 브라우저 상에서는 window객체를 가리킨다. */
+        }
+    }
+
+    // 메서드 호출
+    person.eat('저녁');
+</script>
