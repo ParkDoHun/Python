@@ -99,7 +99,7 @@ function next_Page(tid, count, number) {
 
     //값 저장 후 페이지 이동
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-    location.href = "http://127.0.0.1:5500/Project/fixHTML/html/"+number+'~'+".html?"+number;
+    location.href = "http://127.0.0.1:5500/fixHTML/html/"+number+'~'+".html?"+number;
 };
 
 /*이전 페이지로 이동*/
@@ -125,12 +125,12 @@ function previous_Page(tid, question_cnt, number){
 
     //값 저장 후 페이지 이동
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-    location.href = "http://127.0.0.1:5500/htmlProject/fixHTML/html/"+number+'~'+".html?"+number;
+    location.href = "http://127.0.0.1:5500/fixHTML/html/"+number+'~'+".html?"+number;
 }
 
 // 이전 페이지 -> 메인 페이지
 function main_page(){
-    location.href = "http://127.0.0.1:5500/Project/fixHTML/html/main.html";
+    location.href = "http://127.0.0.1:5500/fixHTML/html/main.html";
 }
 
 // 저장된 데이터 JSP에 전달

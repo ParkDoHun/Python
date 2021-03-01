@@ -11,20 +11,11 @@
 .table {display: table; width: 100%;}
 .row {display: table-row;}
 
-/* 예시 문구 */
-.cell {
-    display: table-cell;
-    padding: 10px;
-    border: 1px solid black;
-}
-
-/*문항이 4개일때*/
-.cell2 {/* padding: 12px;*/ background-color: rgba(96, 96, 96, 0.5) ; display: table-cell;}
-
-.col0{
+.col0 {
     width: 2%;
     text-align: center;
 }
+
 .col1 { 
     width: 50%;
     text-align: center;
@@ -34,8 +25,7 @@
     text-align: center;
 }
 
-.col3 {
-    width: 100%;
+.col3 {width: 100%;
     font-weight: bold;
 }
 
@@ -43,6 +33,52 @@
     width: 10%;
     font-weight: bold;
 }
+
+/*예시 문구*/
+.cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/*설문지 문구*/
+.cell2 {
+    background-color: rgba(96, 96, 96, 0.5);
+    display: table-cell;
+}
+
+.cell3 {
+    color :navy;
+    text-align: left;
+    width: 43%;
+    float: left;
+    font-weight: 600;
+}
+  
+  .cell4 {
+    color :navy;
+    text-align: left;
+    width: 46%;
+    float: right;
+    font-weight: 600;
+}
+
+  .cell5 {
+    width: 4%;
+    float: left;
+    margin: 0;
+}
+  
+  .cell6 {
+    float: left;
+    position: relative;
+    width: 5px;
+    left: 3%;
+    height: 42px;
+    margin-left: 0;
+    background: rgba(82, 85, 82, 0.2);
+}
+
 .survaysname1{
     /*flex: 1;*/
     width: 20%;
@@ -57,11 +93,17 @@
     /*box-sizing: border-box;*/
 }
 
-p{
+p {
     color :navy;
     font-weight: 600;
 }
 
+.p1 {
+    background-color: white;
+    margin: 0;
+    color: black;
+    padding-bottom: 10px;
+}
 
 header {
     border : 1px;
@@ -73,70 +115,23 @@ header {
     color: white;
 }
 
-.cell3 {
-    color :navy;
-    text-align: left;
-    width: 43%;
-    float: left;
-    font-weight: 600;
-  }
-  
-  .cell4 {
-    color :navy;
-    text-align: left;
-    width: 46%;
-    float: right;
-    font-weight: 600;
-  }
-
-  .cell5 {
-    width: 4%;
-    float: left;
-    margin: 0;
-  }
-  
-  .cell6 {
-    float: left;
-    position: relative;
-    width: 5px;
-    left: 3%;
-    height: 42px;
-    margin-left: 0;
-    background: rgba(82, 85, 82, 0.2);
-  }
-
-  body{
-      border: 1px solid black;
-      padding: 0.6%;
-      padding-bottom: 0.1%;
-      max-height: auto;
-      max-width: 1280px;
-      box-sizing: border-box ;
-  }
-
- .p1 {
-    background-color: white;
-    margin: 0;
-    color: black;
-    padding-bottom: 10px;
-  }
-
-  input[type="radio"]{
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    margin: 0;
+body {
+    margin: 0 auto;
     border: 1px solid black;
-  }
+    padding: 0.6%;
+    padding-bottom: 0.1%;
+    max-height: auto;
+    max-width: 1280px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
 
-  input[type="radio"]:checked{
-      box-shadow: inset 0 0 0 20px rgba(255, 0, 0, 0.2);
-      background-color: black;
-    }
-
+/*
+body { -ms-overflow-style:none; }
+body::-webkit-scrollbar { display:none; }
+*/
 fieldset {
     background-color:  rgba(214, 224, 120, 0.185);
-    font-weight: bold;
 }
 
 legend {
@@ -144,11 +139,17 @@ legend {
     font-weight: 900;
 }
 
-/*테스트
-.cell_check:hover {
-    background-color: yellow;
-}
-.cell_check:active {
-    background-color: rgba(218, 36, 218, 0.6);
-}
-*/
+
+  input[type="radio"] {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    border: 1px solid black;
+  }
+
+  input[type="radio"]:checked {
+      box-shadow: inset 0 0 0 20px rgba(255, 0, 0, 0.2);
+      background-color: black;
+    }
+
