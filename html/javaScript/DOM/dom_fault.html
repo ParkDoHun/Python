@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <script>
+        // h1 태그의 배경 색상을 변경합니다.
+        document.querySelector('h1').style.backgroundColor = 'red';
+        // h2 태그의 글자 색상을 변경합니다.
+        document.querySelector('h2').style.color = 'red';
+    </script>
+</head>
+<body>
+    <h1>Process - 1</h1>
+    <h2>Process - 2</h2>
+    <!--태그를 먼저 읽지 않음으로 JS에서 오류 발생-->
+    <!--script의 위치를 body 하단에 삽입하면 해결되지만 이 경우 HTML 페이지가 방대해서 유지보수하기 어려움.-->
+</body>
+</html>

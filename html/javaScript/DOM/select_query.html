@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Basic</title>
+    <script>
+        // 이벤트를 연결합니다.
+        window.onload = function () {
+            // 문서 객체를 선택합니다.
+            var header = document.querySelector('h1');
+            /* 
+            querySelector는 특정 name이나 id를 제한하지않고 css선택자를 사용하여 요소를 찾습니다.
+            (#sections) -> sections 아이디를 가진 요소를 찾습니다.
+            (.section) -> section 클래스명을 가진 요소를 찾습니다.
+            반환객체는 한개의 요소만 찾을 수 있으며 동일한 클래스명을 가진 객체가 있을 경우 html문서내의 첫번째를 나타내는 요소를 반환합니다.
+            */  
+
+            // 문서 객체를 조작합니다.
+            header.style.color = 'orange';
+            header.style.background = 'red';
+            header.innerHTML = 'From JavaScript';
+        };
+    </script>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+</body>
+</html>
