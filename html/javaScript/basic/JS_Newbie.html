@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+       <div>name : <input type="text" id="name"></div>
+       <div>지역 : 
+            <select id="city" onchange="btn_change()">
+                <option value="02">서울</option>
+                <option value="064">제주</option>
+            </select>
+    </div>
+    <div> 동네 : 
+        <select id="region_02">
+            <option value="">강남</option>
+            <option value="">서초</option>
+        </select>
+        <!-- 행을 드레그하고 CTRL + /을 누르면 주석처리 -->
+        <!-- 미리 버튼 숨겨둠 -->
+        <select id="region_064" style="display: none;">
+            <option value="">제주시</option>
+            <option value="">서귀포시</option>
+        </select>
+    </div>
+    <button type="button" onclick="submit();">등록</button>
+    </div>
+
+    <p id="demo"></p>
+
+    <script>
+        function submit() {
+            alert(document.getElementById('city').value);
+            
+        }
+
+        function btn_change() {
+            // 행을 드레그하고 CTRL + /을 누르면 주석처리
+            // var ccity = document.getElementById('city').value; 이것도 된다.
+            var ccity = document.getElementById('city');
+            document.getElementById('region_02').style.display = "none";
+            document.getElementById('region_064').style.display = "none";
+
+            document.getElementById('region_' + ccity.value).style.display = "";
+        }
+
+
+
+
+
+
+        
+        // var는 변수명을 중복으로 선언하면 그 값으로 바뀔 수 있다.
+        // let은 유니크타입을 가지게 되어 중복된 변수명을 선언할 수 없다.
+        // const는 중복된 변수명도 안되고 그 변수의 값을 바꾸는 것도 안된다.
+
+
+
+
+
+
+        var x = 10;
+        x += 20;
+
+        let y = 33;
+        y += 10;
+
+        const z = 10;
+
+        var x = 15;
+
+        // 앞에 문자가 먼저 왔으므로 뒤에 있는 숫자를 문자로 인식
+        var x = "Volvo" + 16 + 4;   // Volvo164
+        // 앞에 숫자가 먼저 왔으므로 16 + 4 연산 후 문자 인식
+        var x = 16 + 4 + "Volvo";   // 20Volvo
+
+        // 배열(Arrays)
+        var cars = ["Saab", "Volvo", "BMW"];
+        // 배열 출력
+        document.getElementById('name').innerHTML = cars[0];    // Saab
+        document.getElementById('name').innerHTML = cars[1];    // Volvo
+        document.getElementById('name').innerHTML = cars[2];    // BMW
+
+        // 객체(Object)
+        var person = {
+            firstName: "Park",
+            lastName: "Dohun",
+            age: "25",
+            eyeColor: "black"
+        };
+
+        document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + "years old.";
+
+        // 변수 예시 
+        let a = 1;
+        a = 1.231;
+        a = "dohun";
+        a = true; // false
+
+    </script>
+
+</body>
+</html>
