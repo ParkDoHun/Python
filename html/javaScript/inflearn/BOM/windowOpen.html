@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>windowOpen</title>
+</head>
+<body>
+    <div>
+        <!--onkeypress는 키보드 누르면 발생하는 이벤트 핸들러이다.-->
+        <!--this.value는 input 태그의 value를 말한다.-->>
+        입력 : <input type="text" value="" onkeypress="text_copy1(this.value)">
+    </div>
+    <div>
+        복사 : <input type="text" id="paste" disabled>
+    </div>
+    <input type="button" value="열기" onclick="open1()">
+    <script>
+        function text_copy1(msg1) {
+            document.getElementById('paste').value = msg1;
+        }
+        // 윈도우 오픈
+        function open1() {
+            window.open('confirm.html');
+        }
+
+    </script>
+</body>
+</html>

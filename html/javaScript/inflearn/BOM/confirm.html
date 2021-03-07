@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>confirm</title>
+</head>
+<body>
+    <input type="button" value="confirm(컨펌)" onclick="func_confirm()">
+    <script>
+        // else에 중괄호 붙여야 함.
+        function func_confirm() {
+            if(confirm('허용하시겠습니까?')) {
+                alert('허용되었습니다.');
+            } else {
+                alert('허용이 거부되었습니다.');
+                 }
+        }
+    </script>
+</body>
+</html>
