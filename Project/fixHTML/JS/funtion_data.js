@@ -1,3 +1,5 @@
+
+
 /*split을 이용하여 url에서 number 추출*/
 function splitNumber(){
     var arSplitUrl = location.href.split('?');
@@ -12,6 +14,8 @@ function splitPage(){
     var arSplitFileName = arFileName.split("~.");   
     var sFileName = arSplitFileName[0];
     return Number(sFileName);
+
+    
 } 
 
 /*다음 페이지로 이동과 동시에 Session에 값 추가*/
@@ -25,10 +29,15 @@ function next_Page(tid, count, number) {
     //Radio 버튼 값 불러오기
     var survayValue1 = document.getElementsByName("survay1");
     var survayValue2 = document.getElementsByName("survay2");
-    var survayValue3 = document.getElementsByName("survay3");
-    if (question_cnt == 0 ){
-        var survayValue4 = document.getElementsByName("survay4");
+   
+    if (question_cnt != -1)
+    {
+        var survayValue3 = document.getElementsByName("survay3");
+        if (question_cnt == 0 ){
+            var survayValue4 = document.getElementsByName("survay4");
+        }
     }
+
     // 두 개의 값이 체크되어 있는지 검사
     var chk_cnt = 0;
 
@@ -39,6 +48,8 @@ function next_Page(tid, count, number) {
         if(survayValue2[i].checked==true){
             chk_cnt++;
         }
+        if (question_cnt != -1)
+     {
         if(survayValue3[i].checked==true){
             chk_cnt++;
         }
@@ -47,18 +58,27 @@ function next_Page(tid, count, number) {
                 chk_cnt++;
             }
         }
+     }
     }
 
     // 두 가지 항목이 체크되어 있지 않으면 알람 후 재입력 유도
-    if ( question_cnt != 0 ){
+
+    if(question_cnt == -1){
+        if(chk_cnt<2){
+            alert('체크되지 않은 문항이 있습니다');
+            return;
+        }
+    }
+
+    else if ( question_cnt != 0 ){
         if(chk_cnt<3){
-            alert('체크되지 않은 문항이 있습니다.');
+            alert('체크되지 않은 문항이 있습니다');
             return;
         }
     }
     else{
         if(chk_cnt<4){
-            alert('체크되지 않은 문항이 있습니다.');
+            alert('체크되지 않은 문항이 있습니다');
             return;
         }
     }
@@ -69,7 +89,6 @@ function next_Page(tid, count, number) {
         //만약 라디오 버튼이 체크가 되어있다면 true
         if(survayValue1[i].checked==true){
             //버튼 값 알림 후 value push
-            alert(survayValue1[i].value);
             existingEntries.push(survayValue1[i].value);
         }
        
@@ -77,72 +96,58 @@ function next_Page(tid, count, number) {
     for(var i = 0; i<survayValue2.length; i++){
         if(survayValue2[i].checked==true){
             //버튼 값 알림 후 value push
-            alert(survayValue2[i].value);
             existingEntries.push(survayValue2[i].value);
         }
     }
+    if (question_cnt != -1)
+    {
 
     for(var i = 0; i<survayValue3.length; i++){
         if(survayValue3[i].checked==true){
-            alert(survayValue3[i].value);
             existingEntries.push(survayValue3[i].value);
         }
     }
     if ( question_cnt == 0){
         for(var i = 0; i<survayValue4.length; i++){
             if(survayValue4[i].checked==true){
-                alert(survayValue4[i].value);
                 existingEntries.push(survayValue4[i].value);
             }
         }
     }
+}
+
+    
 
     //값 저장 후 페이지 이동
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-    location.href = "http://127.0.0.1:5500/fixHTML/html/"+number+'~'+".html?"+number;
+
+    if(number == 187){
+        endSurvay();
+    }
+    else{
+        location.href = "http://127.0.0.1:5500/fixHTML/"+tid+'/'+number+'~'+".html?"+number;
+    }
 };
 
 /*이전 페이지로 이동*/
 function previous_Page(tid, question_cnt, number){
-    // Session에 저장되어 있느 배열 불러오기
+    // Session에 저장되어 있는 배열 불러오기
     var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
 
     //이전을 누르면 기존에 저장된 2개 value 삭제
-  
-    if(question_cnt % 2 != 0){
-    existingEntries.pop();
-    existingEntries.pop();
-    existingEntries.pop();
-    }
 
-    else{
-    existingEntries.pop();
-    existingEntries.pop();
-    existingEntries.pop();
-    existingEntries.pop();
+    for(i=0; i<question_cnt; i++){
+        existingEntries.pop();
     }
     
 
     //값 저장 후 페이지 이동
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-    location.href = "http://127.0.0.1:5500/fixHTML/html/"+number+'~'+".html?"+number;
+    location.href = "http://127.0.0.1:5500/fixHTML/"+tid+'/'+number+'~'+".html?"+number;
 }
-
-// 이전 페이지 -> 메인 페이지
-function main_page(){
-    location.href = "http://127.0.0.1:5500/fixHTML/html/main.html";
-}
-
-// 저장된 데이터 JSP에 전달
-function dataSend(){
-    var gt = localStorage.getItem("allEntries");
-    document.getElementById("checkData").value = gt;
-
-    console.log(gt);
- };
-
 // 저장된 세션 삭제
-function clearSesstion(){
-    localStorage.clear();
-    
+
+
+function endSurvay(){
+    location.href = "http://127.0.0.1:5500/fixHTML/end.html";
 }

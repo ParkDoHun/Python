@@ -12,8 +12,8 @@
 <body>
 
     <script>
-        number = 1;
-        count = 1;
+        number = 0;
+        count = 0;
     </script>
     
 <img class="img-logo" src="../../img/logo.png" alt="logo" height='40'>
@@ -85,31 +85,31 @@
         <div class="row">
             <span class="cell2 survay0_radio">
                 <div class="p1">전혀 아니다</div>
-                <input type="radio" name="survay1" value="1" />
+                <input type="radio" name="temp" value="1" />
             </span>
             <span class="cell2 survay0_radio" >
                 <div class="p1">&nbsp;</div>
-                <input type="radio" name="survay1" value="2" />
+                <input type="radio" name="temp" value="2" />
             </span>
             <span class="cell2 survay0_radio" >
                 <div class="p1">&nbsp;</div>
-                <input type="radio" name="survay1" value="3" />
+                <input type="radio" name="temp" value="3" />
             </span>
             <span class="cell2 survay0_radio" >
                 <div class="p1">보통이다</div>
-                <input type="radio" name="survay1" value="4" />
+                <input type="radio" name="temp" value="4" />
             </span>
             <span class="cell2 survay0_radio" >
                 <div class="p1">&nbsp;</div>
-                <input type="radio" name="survay1" value="5" />
+                <input type="radio" name="temp" value="5" />
             </span>
             <span class="cell2 survay0_radio" >
                 <div class="p1">&nbsp;</div>
-                <input type="radio" name="survay1" value="6" />
+                <input type="radio" name="temp" value="6" />
             </span>
             <span class="cell2 survay0_radio" >
                 <div class="p1">매우 그렇다</div>
-                <input type="radio" name="survay1" value="7" />
+                <input type="radio" name="temp" value="7" />
             </span>
     </div>
 </div>
@@ -195,8 +195,8 @@
 
 <div class="flexbox1">
     <!--onclick에 여러개 함수를 걸려면 next_Page; input();세미콜론을 이용하여 여러개 가능-->
-    <button type="button" class="survay-btn" onclick="previous_Page(0/3, 1, number-4)">이전</button>
-     <button type="button" class="survay-btn" onclick=" next_Page(0/4, count, number)">다음</button>
+    <button type="button" class="survay-btn" onclick="previous_Page('0/3', 2, 13)">이전</button>
+     <button type="button" class="survay-btn" onclick=" next_Page('0/4', count, number)">다음</button>
  </div>
 </body>
 </html>
