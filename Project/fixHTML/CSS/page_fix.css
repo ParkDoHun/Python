@@ -1,3 +1,6 @@
+/* 문자 인코딩 방식을 지정.
+기계(컴퓨터, 브라우저)가 잘 이해할 수 있도록 알려준다. */
+@charset "utf-8";
 
 /*
 수정된 틀
@@ -9,9 +12,21 @@
     border: 1px solid black;
     }
 .table {display: table; width: 100%;}
+
+.point_table {
+    border-collapse: collapse;
+    text-align: center;
+    border: 3px double orange;
+    margin: auto;
+}
+
+tr {
+    height: 30px;
+    border-bottom:  1px solid red;
+}
 .row {display: table-row;}
 
-.col0 {
+.col0{
     width: 2%;
     text-align: center;
 }
@@ -50,7 +65,7 @@
 .cell3 {
     color :navy;
     text-align: left;
-    width: 43%;
+    width: 40%;
     float: left;
     font-weight: 600;
 }
@@ -58,13 +73,13 @@
   .cell4 {
     color :navy;
     text-align: left;
-    width: 46%;
+    width: 40%;
     float: right;
     font-weight: 600;
 }
 
   .cell5 {
-    width: 4%;
+    width: 7%;
     float: left;
     margin: 0;
 }
@@ -93,7 +108,12 @@
     /*box-sizing: border-box;*/
 }
 
-p {
+.survay0_radio {
+    width: 5%;
+    text-align: center;
+}
+
+p{
     color :navy;
     font-weight: 600;
 }
@@ -108,14 +128,23 @@ p {
 header {
     border : 1px;
     padding: 10px;
-    background-color: rgba(27, 156, 196, 0.6);
     height: 30px;
     font-size: 23px;
     font-weight: 600;
     color: white;
 }
+/*
+body{
+    border: 1px solid black;
+    padding: 0.6%;
+    padding-bottom: 0.1%;
+    max-height: 960px;
+    max-width: 1280px;
+    box-sizing: border-box ;
+}
+*/
 
-body {
+body{
     margin: 0 auto;
     border: 1px solid black;
     padding: 0.6%;
@@ -126,11 +155,7 @@ body {
     box-sizing: border-box;
 }
 
-/*
-body { -ms-overflow-style:none; }
-body::-webkit-scrollbar { display:none; }
-*/
-fieldset {
+fieldset{
     background-color:  rgba(214, 224, 120, 0.185);
 }
 
@@ -139,17 +164,69 @@ legend {
     font-weight: 900;
 }
 
-
-  input[type="radio"] {
+  input[type="radio"]{
     width: 100%;
     text-align: center;
     cursor: pointer;
     margin: 0;
     border: 1px solid black;
   }
-
-  input[type="radio"]:checked {
+/* 가상 클래스 */
+  input[type="radio"]:checked{
       box-shadow: inset 0 0 0 20px rgba(255, 0, 0, 0.2);
       background-color: black;
     }
 
+.flexbox1 {
+    display: flex;
+    /* justify-content는 플렉스 요소의 수평 방향 정렬 방식을 설정합니다. */
+    justify-content: center;
+}
+
+
+/* 2번 페이지 (적성 검사) */
+.header_0 {
+    background-color: rgba(211, 130, 24, 0.6);
+}
+/* 3번 페이지 (레인보우) */
+.header_1 {
+    background-color: rgba(202, 19, 147, 0.6);
+}
+
+/* 맨 처음에 만든 것 */
+.header_2 {
+    background-color: rgba(27, 156, 196, 0.6);
+}
+
+/* 박스가 있는 문항 */
+.txtBox0 {
+    border-style: solid;
+    border-width: 2px;
+    padding: 12px;
+    word-break: break-all;
+    font-weight: 700;
+}
+
+/* 특정 문항 리스트 */
+ul{
+    padding-left: 60px;
+    font-weight: 700;
+    list-style-type: disc;
+    padding-bottom: 4px;
+}
+
+/* 라벨 포인터 */
+label{
+    cursor: pointer;
+}
+
+/* 형제 관계(동위 관계)에서 뒤에 위치하는 요소를 선택 */
+input:checked + span {
+    width: auto;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+/* 왼쪽 여백 */
+.LeftPadd {
+    padding-left: 5%;
+}

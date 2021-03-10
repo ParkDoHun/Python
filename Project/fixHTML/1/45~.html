@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <!--<link rel="stylesheet" href="../CSS/page.css">-->
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40' >
+<br>
+<header class='header_1'>
+    레인보우학습역량검사
+</header>
+
+
+<!-- 문항 -->
+<p><script>document.write(number, '.'); number +=1;</script>
+    나는 어떤 아이디어나 관심사에 잠시 사로 잡혔다가 얼마 후에 관심을 잃은 적이 있다.
+</p>
+    <br>
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname1">
+            <div class='p1'>전혀 그렇지 않다</div>
+            <input type="radio" name="survay1" value="1" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>그렇지 않다</div>
+            <input type="radio" name="survay1" value="2" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>그런편이다</div>
+            <input type="radio" name="survay1" value="3" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>그렇다</div>
+            <input type="radio" name="survay1" value="4" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>매우 그렇다</div>
+            <input type="radio" name="survay1" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    나는 좌절을 딛고 중요한 도전에 성공한 적이 있다.
+</p>
+    <br>
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname1">
+            <div class='p1'>전혀 그렇지 않다</div>
+            <input type="radio" name="survay2" value="1" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>그렇지 않다</div>
+            <input type="radio" name="survay2" value="2" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>그런편이다</div>
+            <input type="radio" name="survay2" value="3" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>그렇다</div>
+            <input type="radio" name="survay2" value="4" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>매우 그렇다</div>
+            <input type="radio" name="survay2" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+   <!--onclick에 여러개 함수를 걸려면 next_Page; input();세미콜론을 이용하여 여러개 가능-->
+    <button type="button" class="survay-btn" onclick="previous_Page(1, 2, number-4)">이전</button>
+    <button type="button" class="survay-btn" onclick=" next_Page(1, count, number)">다음</button>
+</div>
+</body>
+</html>

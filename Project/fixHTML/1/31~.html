@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <!--<link rel="stylesheet" href="../CSS/page.css">-->
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40' >
+<br>
+<header class='header_1'>
+    레인보우학습역량검사
+</header>
+
+
+<!-- 문항 -->
+<p><script>document.write(number, '.'); number +=1;</script>
+    다음 중 나와 비슷한 상황에 있는 사람은 몇 명인가요?
+</p>
+<div>
+<ul>
+    <li>나는 아침식사를 하는 것 보다는 잠을 좀 더 자는 게 좋아서 아침식사는 거르는 편이다.</li>
+    <li>나는 책상정리를 가끔 하는 편이라 부모님한테 자주 잔소리를 듣는다.</li>
+    <li>나는 취미활동이나 운동을 규칙적으로 하기보다는 생각나면 가끔하는 편이다.</li>
+    <li>나는 공부할 때 아주 조용한 곳 보다는 소음이 있는 곳에서 더 잘 되는 것 같다.</li>
+    <li>나는 공부할 때도 틈틈이 핸드폰을 확인하고, 친구들의 연락을 무시할 수 없다.</li>
+    <li>나는 코가 자주 막히기도 해서 공부할 때나 수업을 들을 때도 신경이 많이 쓰인다.</li>
+    <li>나는 컴퓨터 게임을 좋아해서 시간을 정해놓고라도 게임을 하는 편이다.</li>
+    <li>나는 TV시청을 하는 것이 공부에 방해되는 것이라고 생각하진 않는다.</li>
+</ul>
+</div>
+    <br>
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname1">
+            <div class='p1'>없음</div>
+            <input type="radio" name="survay1" value="1" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>1~2개</div>
+            <input type="radio" name="survay1" value="2" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>3~4개</div>
+            <input type="radio" name="survay1" value="3" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>5~6개</div>
+            <input type="radio" name="survay1" value="4" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>7~8개</div>
+            <input type="radio" name="survay1" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    다음은 다양한 사람의 신념입니다. 가장 마음에 드는 신념을 선택해 보세요.
+</p>
+    <br>
+    <div class="LeftPadd">
+            <label><input style="width: auto;" type="radio" name="survay2" value="1" /> <span>규칙에 예외란 없다.</span></label><br>
+            <label><input style="width: auto;" type="radio" name="survay2" value="2" /> <span>의심될 때는 하지 마라.</span></label><br>
+            <label><input style="width: auto;" type="radio" name="survay2" value="3" /> <span>인내는 최고의 미덕이다.</span></label><br>
+            <label><input style="width: auto;" type="radio" name="survay2" value="4" /> <span>달릴 수 있는데 걷지 마라.</span></label><br>
+            <label><input style="width: auto;" type="radio" name="survay2" value="5" /> <span>규칙을 바꿀 수 없으면 규칙을 무시해라.</span></label><br>
+    </div>
+<br>
+<br>
+
+<div class="flexbox1">
+   <!--onclick에 여러개 함수를 걸려면 next_Page; input();세미콜론을 이용하여 여러개 가능-->
+    <button type="button" class="survay-btn" onclick="previous_Page(1, 2, number-4)">이전</button>
+    <button type="button" class="survay-btn" onclick=" next_Page(1, count, number)">다음</button>
+</div>
+</body>
+</html>

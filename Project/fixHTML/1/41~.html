@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <!--<link rel="stylesheet" href="../CSS/page.css">-->
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40' >
+<br>
+<header class='header_1'>
+    레인보우학습역량검사
+</header>
+
+
+<!-- 문항 -->
+<p><script>document.write(number, '.'); number +=1;</script>
+    한 달에 몇 권의 책을 읽나요? 주제와 상관없습니다.
+</p>
+    <br>
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname1">
+            <div class='p1'>1권 이하</div>
+            <input type="radio" name="survay1" value="1" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>2~3권</div>
+            <input type="radio" name="survay1" value="2" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>3~4권</div>
+            <input type="radio" name="survay1" value="3" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>5~6권</div>
+            <input type="radio" name="survay1" value="4" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>7권 이상</div>
+            <input type="radio" name="survay1" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    다음 중 당신에게도 해당되는 내용은 몇 개인가요?
+</p>
+<div>
+<ul>
+    <li>성격이 급하고 쉽게 화를 낸다.</li>
+    <li>온라인상의 게임, 가상현실 속에서도 내맘대로 되지 않아 화가 난 적이 여러번 있다. </li>
+    <li>분노를 조절하기 어렵고 어떻게 해야 할지 모르겠다.</li>
+    <li>잘한 일은 칭찬 받아야 하고 그렇지 않으면 화가 난다.</li>
+    <li>다른 사람의 잘못은 꼭 짚고 넘어가야 하며 이로 인해 트러블이 생긴다. </li>
+    <li>화가 나면 타인에게 폭언, 폭력을 가한다. </li>
+    <li>분노가 극에 달해 운 적이 있다.</li>
+    <li>잘못에 대한 책임을 타인에게 돌려 탓 한 적이 있다. </li>
+    <li>화가 나면 물건을 주위에 집어던진다.  </li>
+    <li>다른 사람이 나를 무시한다고 느끼고 억울한 감정이 자주 든다. </li>
+    <li>화를 조절하지 못해 일을 망친 적이 있다.</li>
+    <li>일이 잘 안 풀리면 문제를 해결하기보다 쉽게 조절하고 포기하는 편이다.</li>
+</ul>
+</div>
+    <br>
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname1">
+            <div class='p1'>0~2개</div>
+            <input type="radio" name="survay2" value="1" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>3~5개</div>
+            <input type="radio" name="survay2" value="2" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>6~8개</div>
+            <input type="radio" name="survay2" value="3" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>9~10개</div>
+            <input type="radio" name="survay2" value="4" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>11~12개</div>
+            <input type="radio" name="survay2" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<div class="flexbox1">
+   <!--onclick에 여러개 함수를 걸려면 next_Page; input();세미콜론을 이용하여 여러개 가능-->
+    <button type="button" class="survay-btn" onclick="previous_Page(1, 2, number-4)">이전</button>
+    <button type="button" class="survay-btn" onclick=" next_Page(1, count, number)">다음</button>
+</div>
+</body>
+</html>
