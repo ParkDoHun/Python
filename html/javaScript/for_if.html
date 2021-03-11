@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        var string = 'Hello world.';
+        var index;
+
+        // 문자열은 유사배열이므로 for문으로 순회할 수 있다.
+        for(var i = 0; i < string.length; i++) {
+            // 문자열의 개별 문자가 'l'인 경우
+            if (string[i] === 'l') {
+                index = i;
+                break; // 반복문 탈출
+            }
+        }
+
+        console.log(index);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

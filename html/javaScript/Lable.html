@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        // outer라는 식별자가 붙은 레이블 for 문
+        outer: for (var i = 0; i < 3; i++) {
+            for (var j = 0; j < 3; j++) {
+                // i+j === 2이면 외부 for문을 탈출
+                // 중첩된 for문을 외부로 탈출할 때 레이블 문은 유용하지만
+                // 그 외의 경우 레이블 문은 권장하지 않는다.
+                /*
+                레이블 문을 사용하면 프로그램의 흐름이 복잡해져서 가독성이 나빠지고 오류를 발생시킬 가능성이 높아지기 때문이다.
+
+                break문은 레이블 문 뿐만이 아니라 반복문, switch문에서도 사용할 수 있다.
+                이 경우에는 break문에 레이블 식별자를 지정하지 않는다.
+                break문은 반복문을 더 이상 진행하지 않아도 될 때 불필요한 반복을 회피할 수 있어 유용하다.
+                */
+                if(i + j === 2) break outer;
+            }
+            console.log('testTemp')
+        }
+        console.log('Done!');
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
