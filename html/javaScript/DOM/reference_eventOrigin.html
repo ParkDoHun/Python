@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Traditional</title>
+</head>
+<body>
+    <button id="button">버튼 - </button>
+    <script>
+        // 이벤트를 연결합니다.
+        // element.textContent = '내용'
+        // innerText는 불필요한 공백을 제거하고 텍스트로 반환하지만 textContent는 모든 텍스트를 그대로 가져온다.
+        document.getElementById('button').onclick = function () {
+            this.textContent = this.textContent + '★';
+        };
+    </script>
+</body>
+</html>

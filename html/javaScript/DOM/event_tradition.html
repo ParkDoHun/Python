@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Traditional Event</title>
+    <script>
+        // 이벤트를 연결합니다.
+        window.onload = function () {
+            // 문서 객체를 선택합니다.
+            // 아이디를 얻습니다.
+            var button = document.getElementById('button');
+            // 이벤트를 연결합니다.
+            button.onclick = function () {             // 이벤트 리스너
+                alert('클릭!');
+            };
+        };
+    </script>
+</head>
+<body>
+    <button type="button" id="button">버튼</button>
+</body>
+</html>
