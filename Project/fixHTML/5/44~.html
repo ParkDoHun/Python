@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+<br>
+<header class="header_2">
+    특성화고 검사 설문조사
+</header><br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    본인은 취업 박람회에서 실제 기업 담당관과 면접을 해본 경험이 있습니까?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">0회</div>
+                <input type="radio" name="survay1" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">1회</div>
+                <input type="radio" name="survay1" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">2회</div>
+                <input type="radio" name="survay1" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">3회</div>
+                <input type="radio" name="survay1" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">4회 이상</div>
+                <input type="radio" name="survay1" value="5" />
+            </span>
+        </div>
+    </div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    본인의 NCS 성취도는 얼마인가요?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">하</div>
+                <input type="radio" name="survay2" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">중하</div>
+                <input type="radio" name="survay2" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">중</div>
+                <input type="radio" name="survay2" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">중상</div>
+                <input type="radio" name="survay2" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">상</div>
+                <input type="radio" name="survay2" value="5" />
+            </span>
+        </div>
+    </div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    본인은 NCS 관련 교육을 얼마나 수강하였나요?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">3개월 이하</div>
+                <input type="radio" name="survay3" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">3~6개월</div>
+                <input type="radio" name="survay3" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">6~12개월</div>
+                <input type="radio" name="survay3" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">12개월 이상</div>
+                <input type="radio" name="survay3" value="4" />
+            </span>
+        </div>
+    </div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    본인이 관심있는 직무는 무엇인가요?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">인사</div>
+                <input type="radio" name="survay4" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">비서직</div>
+                <input type="radio" name="survay4" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">회계</div>
+                <input type="radio" name="survay4" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">세무</div>
+                <input type="radio" name="survay4" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">경영지원(사무행정)</div>
+                <input type="radio" name="survay4" value="5" />
+            </span>
+        </div>
+    </div>
+<br>
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(5, 3, number-7)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(5, count, number)">다음</button>
+</div>
+</body>
+</html>
