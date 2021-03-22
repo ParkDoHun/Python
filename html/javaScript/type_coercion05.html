@@ -1,0 +1,54 @@
+<!-- 불리언 타입으로 변환 -->
+<script>
+    // if 문이나 for 문과 같은 제어문의 조건식(conditional expression)은 불리언 값, 즉 논리적 참, 거짓을 반환해야 하는 표현식이다. 
+    // 자바스크립트 엔진은 제어문의 조건식을 평가 결과를 불리언 타입으로 암묵적 타입 변환한다.
+
+    if('') console.log('1');
+    if(true) console.log('2');
+    if('str') console.log('3');
+    if(0) console.log('4');
+    if(null) console.log('5');
+
+    // 2 3
+
+
+    // 아래 값들은 제어문의 조건식과 같이 불리언 값으로 평가되어야 할 컨텍스트에서 false로 평가되는 Falsy 값이다.
+    if(!false)      console.log(false + ' is falsy value');
+    if(!undefined)  console.log(undefined + ' is falsy value');
+    if(!null)       console.log(null + ' is falsy value');
+    if(!0)          console.log(0 + ' is falsy value');
+    if(!NaN)        console.log(NaN + ' is falsy value');
+    // 빈 문자열
+    if(!'')         console.log('' + ' is falsy value');
+
+    console.log('------------------------------------------------------------------');
+
+    // Truthy/Falsy 값을 판별하는 함수
+    // 주어진 인자가 Falsy 값이면 true, Truthy 값이면 false를 반환한다.
+    // 레퍼 객체 : String, Number, Boolean
+    function isFalsy(v) {
+        return !v;
+    }
+
+    // 주어진 인자가 Falsy 값이면 true, Truthy 값이면 false를 반환한다.
+    function isTruthy(v) {
+        return !!v;
+    }
+
+    // 모두 true를 반환한다.
+    console.log(isFalsy(false));
+    console.log(isFalsy(undefined));
+    console.log(isFalsy(null));
+    console.log(isFalsy(0));
+    console.log(isFalsy(NaN));
+    console.log(isFalsy(''));
+
+    console.log(isTruthy(true));
+    // 빈 문자열이 아닌 문자열은 Truthy 값이다.
+    console.log(isTruthy('0'));
+    console.log(isTruthy({}));
+    console.log(isTruthy([]));
+
+
+
+</script>
