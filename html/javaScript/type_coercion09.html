@@ -1,0 +1,50 @@
+<!-- 단축평가 -->
+<script>
+    'Cat' && 'Dog' // "Dog"
+    'Cat' || 'Dog' // 'Cat'
+    // 첫번째 피연산자 ‘Cat’은 Truthy 값이므로 true로 평가된다. 이 시점에 두번째 피연산자까지 평가해 보지 않아도 위 표현식을 평가할 수 있다.
+    // 논리합 연산자 ||는 논리 연산의 결과를 결정한 첫번째 피연산자의 평가 결과 즉, 문자열 ‘Cat’를 그대로 반환한다.
+    // 논리곱 연산자 &&와 논리합 연산자 ||는 이와 같이 논리 평가를 결정한 피연산자의 평가 결과를 그대로 반환한다. 이를 단축 평가(Short-Circuit evaluation)라 부른다.
+
+    // 논리합(||) 연산자
+    'Cat' || 'Dog' // 'Cat'
+    false || 'Dog' // 'Dog'
+    'Cat' || false // 'Cat'
+
+    // 논리곱(&&) 연산자
+    'Cat' && 'Dog' // Dog
+    false && 'Dog' // false
+    'Cat' && false // false
+
+
+    // 객체가 null인지 확인하고 프로퍼티를 참조할 때
+    var elem = null;
+
+    /* 객체는 키와 값으로 구성된 프로퍼티들의 집합.
+       객체가 null인 경우, 객체의 프로퍼티를 참조하면 타입 에러(TypeError)가 발생한다.
+       이때 단축 평가를 사용하면 에러를 발생시키지 않는다.
+    */
+     console.log(elem.value); // TypeError: Cannot read property 'value' of null
+     console.log(elem && elem.value); // null
+
+
+     // 함수의 인수(argument)를 초기화할 때
+     // 단축 평가를 사용한 매개변수의 기본값 설정
+     function getStringLength(str) {
+         str = str || '';
+         return str.lenght;
+     }
+
+     getStringLength();         // 0
+     getStringLength('hi');     // 2
+
+     // ES6의 매개변수의 기본값 설정
+     function getStringLength(str = '') {
+         return str.length;
+     }
+
+     getStringLength();         // 0
+     getStringLength('hi');     // 2
+     // 함수를 호출할 때 인수를 전달하지 않으면 매개변수는 undefined를 갖는다.
+     // 이때 단축 평가를 사용하여 매개변수의 기본값을 설정하면 undefined로 인해 발생할 수 있는 에러를 방지할 수 있다.
+</script>
