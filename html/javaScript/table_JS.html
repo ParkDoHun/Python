@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 테이블 만들기</title>
+
+</head>
+<body>
+    <h3>기본 구조를 가진 표</h3>
+    <hr>
+    <table border="1"> 
+        <caption>1학기 성적</caption>
+        <thead>
+            <tr>
+            <th>이름</th>
+            <th>HTML5</th>
+            <th>CSS3</th>
+            </tr>
+
+        </thead>
+        <tfoot>
+            <tr>
+                <th>합</th>
+                <th id="SubA1"></th>
+                <th id="SubB1"></th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>박도훈1</td>
+                <td id="a1">50</td>
+                <td id="b1">50</td>
+            </tr>
+            <tr>
+                <td>박도훈2</td>
+                <td id="a2">52</td>
+                <td id="b2">57</td>
+            </tr>
+            <tr>
+                <td>박도훈3</td>
+                <td id="a3">58</td>
+                <td id="b3">55</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var a1 = document.getElementById('a1');
+        var a2 = document.getElementById('a2');
+        var a3 = document.getElementById('a3');
+
+        var b1 = document.getElementById('b1');
+        var b2 = document.getElementById('b2');
+        var b3 = document.getElementById('b3');
+
+        function subA() {
+            return parseInt(a1.innerHTML) + parseInt(a2.innerHTML) + parseInt(a3.innerHTML);
+        }
+
+        function subB() {
+            return parseInt(b1.innerHTML) + parseInt(b2.innerHTML) + parseInt(b3.innerHTML);
+        }
+
+        console.log(typeof(a1));
+
+        document.body.querySelector('#SubA1').innerHTML = subA();
+        document.body.querySelector('#SubB1').innerHTML = subB();
+    </script>
+</body>
+</html>
