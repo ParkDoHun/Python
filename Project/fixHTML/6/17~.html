@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+<br>
+<header class="header_2">
+    개인상담 검사
+</header><br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    나는 코가 자주 막히기도 해서 공부할 때나 수업을 들을 때도 신경이 많이 쓰인다.
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">그렇지 않다</div>
+                <input type="radio" name="survay1" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay1" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay1" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay1" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 그렇다</div>
+                <input type="radio" name="survay1" value="5" />
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    나는 컴퓨터 게임을 좋아해서 시간을 정해놓고라도 게임을 하는 편이다.
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">그렇지 않다</div>
+                <input type="radio" name="survay2" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay2" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay2" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay2" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 그렇다</div>
+                <input type="radio" name="survay2" value="5" />
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    주로 사용하는 SNS계정(페이스북, 카카오스토리,  트위터, 인스타그램 등)을 하루에도 몇 번씩 확인한다.
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">그렇지 않다</div>
+                <input type="radio" name="survay3" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay3" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay3" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay3" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 그렇다</div>
+                <input type="radio" name="survay3" value="5" />
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(6, 4, number-7)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(6, count, number)">다음</button>
+</div>
+</body>
+</html>
