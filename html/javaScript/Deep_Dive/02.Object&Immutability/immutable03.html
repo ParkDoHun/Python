@@ -1,0 +1,21 @@
+<!-- immutable value VS mutable value -->
+<script>
+    var user = {
+        name: 'Park',
+        address: {
+            city: 'Iksan'
+        }
+    };
+    /*
+      변수 myName에 user.name을 할당했을 때 user.name의 참조를 할당하는 것이 아니라
+     immutable한 값 'Park'가 메모리에 새로 생성되고 myName은 이것을 참조하기 때문이다.
+    */
+    var myName = user.name; // 변수 myName은 string 타입이다.
+
+    //  user.name의 값이 변경된다 하더라도 변수 myName이 참조하고 있는 'Park'는 변함이 없다.
+    user.name = 'Kim';
+    console.log(myName);    // Park;
+
+    myName = user.name;     // 재할당
+    console.log(myName);    // Kim
+</script>

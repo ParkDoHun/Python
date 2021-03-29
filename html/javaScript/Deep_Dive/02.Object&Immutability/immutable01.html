@@ -1,0 +1,12 @@
+<!-- immutable value VS mutable value -->
+<script>
+    var statement = 'I am an immutable value'; // string은 immutable value
+    
+    var otherStr = statement.slice(8, 17);
+
+    // Stirng 객체의 slice() 메소드는 statement 변수에 저장된 문자열을 변경하는 것이 아니라 사실은 새로운 문자열을 생성하여 반환하고 있다. 
+    // 그 이유는 문자열은 변경할 수 없는 immutable value이기 때문이다.
+    console.log(otherStr);  // 'immutable'
+    console.log(statement); // 'I am an immutable value'
+
+</script>
