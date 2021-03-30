@@ -1,0 +1,41 @@
+<!-- immutable data pattern : Object.assign -->
+<script>
+    const user1 = {
+        name: 'Park',
+        address: {
+            city: 'Iksan'
+        }
+    };
+
+    // 새로운 빈 객체에 user1을 copy한다.
+
+    /*
+     user1 객체를 빈객체에 복사하여 새로운 객체 user2를 생성하였다. 
+     user1과 user2는 어드레스를 공유하지 않으므로 한 객체를 변경하여도 
+     다른 객체에 아무런 영향을 주지 않는다.
+
+     주의할 것은 user1 객체는 const로 선언되어 재할당은 할 수 없지만 객체의 프로퍼티는 보호되지 않는다. 
+     다시 말하자면 객체의 내용은 변경할 수 있다.
+    */
+     const user2 = Object.assign({}, user1);
+    // user1과 user2는 참조값이 다르다.
+    console.log(user1 === user2); // false
+    
+    user2.name = 'Kim';
+    console.log(user1.name);    // Park
+    console.log(user2.name);    // Kim
+
+    // 객체 내부의 객체(Nested Object)는 Shallow copy(얕은 복사)된다.
+
+    /*
+     Shallow copy(얕은 복사)는 프로퍼티의 값이 객체 형태라면, 객체의 주소를 복사한다. 
+     즉, 복사된 객체는 원본 객체와 동일한 프로퍼티와 값들을 새롭게 가지지만,
+     주소가 복사된 프로퍼티는 새로운 형태가 아닌 같은 것을 공유하게 된다.
+    */
+
+    console.log(user1.address === user2.address);   // true
+
+    user1.address.city = 'Jecheon';
+    console.log(user1.address.city);    // Jecheon
+    console.log(user2.address.city);    // Jecheon
+</script>

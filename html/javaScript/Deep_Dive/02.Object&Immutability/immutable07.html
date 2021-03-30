@@ -1,0 +1,25 @@
+<!-- immutable data pattern : Object.freeze -->
+<script>
+    // Object.freeze()를 사용하여 불변(immutable) 객체로 만들수 있다.
+
+    const user1 = {
+        name: 'Park',
+        address: {
+            city: 'Iksan'
+        }
+    };
+
+    // Object.assign은 완전한 deep copy를 지원하지 않는다.
+    const user2 = Object.assign({}, user1, {name: 'Kim'});
+
+    console.log(user1.name);    // Park
+    console.log(user2.name);    // Kim
+
+    Object.freeze(user1);
+
+    user1.name = 'Kim'; // 무시된다......
+
+    console.log(user1); // { name: 'Park', address: { city: 'Iksan'} }
+    // 객체가 동결(freeze)됐는지 판별합니다.
+    console.log(Object.isFrozen(user1));    // ture
+</script>

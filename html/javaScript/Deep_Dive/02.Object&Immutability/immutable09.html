@@ -1,0 +1,77 @@
+<!-- immutable data pattern : Object.freeze -->
+<script>
+    // 내부 객체까지 변경 불가능하게 만들려면 Deep freeze를 하여야 한다.
+
+
+    function deepFreeze(obj) {
+        // getOwnPropertyNames는 모든 속성(Symbol을 사용하는 프로퍼티를 제외한 열거 불가능 프로퍼티 포함)을 배열로 반환합니다.
+        const props = Object.getOwnPropertyNames(obj);
+
+        // forEach 메서드는 주어진 함수를 배열 요소 각각에 대해 실행합니다.
+        // 화살표(=>) 우측의 표현식을 평가하고, 평가 결과를 반환합니다. (화살표 함수라고 합니다.)
+        props.forEach((name) => {
+            const prop = obj[name];
+            if(typeof prop === 'object' && prop !== null) {
+                deepFreeze(prop);
+            }
+        });
+        return Object.freeze(obj);
+    }
+
+    const user = {
+        name: 'Park',
+        address: {
+            city: 'Iksan'
+        }
+    };
+
+    deepFreeze(user);
+
+    user.name = 'Kim';              // 무시된다......
+    user.address.city = 'Jecheon';  // 무시된다......
+
+    console.log(user);      // { name: 'Park', address: { city: 'Iksan' } }
+
+
+
+
+
+    /* 참고용 주석...      https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+
+    function deepFreeze(object) {
+
+      // 객체에 정의된 속성명을 추출
+      var propNames = Object.getOwnPropertyNames(object);
+
+      // 스스로를 동결하기 전에 속성을 동결
+
+      for (let name of propNames) {
+        let value = object[name];
+
+        object[name] = value && typeof value === "object" ?
+          deepFreeze(value) : value;
+      }
+
+      return Object.freeze(object);
+    }
+
+    var obj2 = {
+      internal: {
+        a: null
+      }
+    };
+
+    deepFreeze(obj2);
+
+    obj2.internal.a = 'anotherValue'; // 비엄격 모드에서 실패
+    obj2.internal.a; // null
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    deepFreeze()에 대한 개선은 객체가 불변하게 되는 과정에 있을 때 
+    deepFreeze()의 재귀적인 호출을 차단할 수 있도록 경로(예, 배열) 인자를 받는 내부 함수를 소유하는 것입니다.
+     [window]와 같은, 동결되면 안되는 객체를 동결하는 것에 대한 위험은 여전히 남아 있습니다.
+    */
+</script>
+
+

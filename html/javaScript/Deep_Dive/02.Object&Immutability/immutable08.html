@@ -1,0 +1,15 @@
+<!-- immutable data pattern : Object.freeze -->
+<script>
+    const user = {
+        name: 'Park',
+        address: {
+            city: 'Iksan'
+        }
+    };
+    
+    // 객체 내부의 객체(Nested Object)는 변경가능하다.
+    Object.freeze(user);
+
+    user.address.city = 'Jecheon';  // 변경된다......
+    console.log(user); // { name: 'Park', address: { city: 'Jechoen' } }
+</script>
