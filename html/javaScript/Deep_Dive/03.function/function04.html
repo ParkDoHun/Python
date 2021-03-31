@@ -1,0 +1,16 @@
+<!-- 2. 함수 호이스팅 -->
+<script>
+    /*
+     함수 표현식의 경우 함수 호이스팅이 아니라 변수 호이스팅이 발생한다.
+
+     변수 호이스팅은 변수 생성 및 초기화와 할당이 분리되어 진행된다.
+     호이스팅된 변수는 undefined로 초기화 되고 실제값의 할당은 할당문에서 이루어진다.
+    */
+
+    // 변수 호이스팅
+    var res = square(5);    // TypeError: square is not a function
+
+    var square = function(number) {
+        return number * number;
+    }
+</script>
