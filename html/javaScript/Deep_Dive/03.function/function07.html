@@ -1,0 +1,17 @@
+<!-- 4. 매개변수(Parameter, 인자) : Call-by-value -->
+<script>
+    /*
+     원시 타입 인수는 Call-by-value(값에 의한 호출)로 동작한다.
+     이는 함수 호출 시 원시 타입 인수를 함수에 매개변수로 전달할 때 매개변수에 값을 복사하여 함수로 전달하는 방식이다. 
+     이때 함수 내에서 매개변수를 통해 값이 변경되어도 전달이 완료된 원시 타입 값은 변경되지 않는다.
+    */
+    function foo(primitive) {
+        primitive += 1;
+        return primitive;
+    }
+
+    var a = 0;
+
+    console.log(foo(a)); // 1
+    console.log(a);     // 0
+</script>
