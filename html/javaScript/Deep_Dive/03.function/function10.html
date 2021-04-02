@@ -1,0 +1,16 @@
+<!-- 6. 함수 객체의 프로퍼티 -->
+<script>
+    /*
+    함수는 객체이다.
+    따라서 함수도 프로퍼티를 가질 수 있다.
+    */
+
+   function square(number) {
+       return number * number;
+   }
+
+   square.x = 10;
+   square.y = 20;
+
+   console.log(square.x, square.y); // 10 20
+</script>
