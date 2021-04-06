@@ -1,0 +1,26 @@
+<!-- 6. 함수 객체의 프로퍼티 : length 프로퍼티 -->
+<script>
+    /*
+    length 프로퍼티는 함수 정의 시 작성된 매개변수 갯수를 의미한다.
+    */
+    
+    function foo() {}
+    console.log(foo.length);    // 0
+
+    function bar(x) {
+        return x;
+    }
+
+    console.log(bar.length);    // 1
+
+    function baz(x ,y) {
+        return x * y;
+    }
+    console.log(baz.length);    // 2
+
+
+    /*
+    arguments.length의 값과는 다를 수 있으므로 주의하여야 한다.
+    arguments.length는 함수 호출시 인자의 갯수이다.
+    */
+</script>

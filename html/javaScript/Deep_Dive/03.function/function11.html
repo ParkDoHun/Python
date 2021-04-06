@@ -1,0 +1,22 @@
+<!-- 6. 함수 객체의 프로퍼티 : arguments 프로퍼티 -->
+<script>
+    /*
+    arguments 객체는 함수 호출 시 전달된 인수(argument)들의 정보를 담고 있는 순회가능한(iterable) 유사 배열 객체(array-like object)이며 함수 내부에서 지역변수처럼 사용된다. 
+    즉, 함수 외부에서는 사용할 수 없다.
+    */
+    function multiply(x, y) {
+        console.log(arguments);
+        return x * y;
+    }
+
+    multiply();         // {}
+    multiply(1);        // { '0' : 1 }
+    multiply(1, 2);     // { '0' : 1, '1' : 2 }
+    multiply(1, 2, 3);  // { '0' : 1, '1' : 2, '2' : 3}
+
+    /*
+    - 매개변수(parameter)는 인수(argument)로 초기화된다.
+    - 매개변수의 갯수보다 인수를 적게 전달했을 때(multiply(), multiply(1)) 인수가 전달되지 않은 매개변수는 undefined으로 초기화된다.
+    - 매개변수의 갯수보다 인수를 더 많이 전달한 경우, 초과된 인수는 무시된다.
+    */
+</script>

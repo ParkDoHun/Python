@@ -1,0 +1,23 @@
+<!-- 6. 함수 객체의 프로퍼티 : arguments 프로퍼티 -->
+<script>
+    function sum() {
+        if (!arguments.length) return 0;
+
+        // arguments 객체를 변환
+        var array = Array.prototype.slice.call(arguments);
+        return array.reduce(function (pre, cur) {
+            return pre + cur;
+        });
+    }
+
+    /*
+     ES6
+     function sum(...args) {
+       if (!args.length) return 0;
+       return args.reduce((pre, cur) => pre + cur);
+     }
+    */
+
+     console.log(sum(1, 2, 3, 4, 5)); // 15
+
+</script>
