@@ -1,0 +1,22 @@
+<!-- 함수의 다양한 형태 : 콜백 함수 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>callback</title>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+    <script>
+    /*
+        콜백 함수(Callback function)는 함수를 명시적으로 호출하는 방식이 아니라 특정 이벤트가 발생했을 때 시스템에 의해 호출되는 함수를 말한다.\
+        콜백 함수가 자주 사용되는 대표적인 예는 이벤트 핸들러 처리이다.  
+    */
+
+        var button = document.getElementById('myButton');
+        button.addEventListener('click', function() {
+            console.log('button clicked!');
+        });
+    </script>
+</body>
+</html>
