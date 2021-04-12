@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <!--<link rel="stylesheet" href="../CSS/page.css">-->
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40' >
+<br>
+<header class='header_1'>
+    레인보우학습역량검사
+</header>
+    
+    <!--문항 번호를 생성후 출력 및 연산-->
+    <!--
+    <p>
+        <script>
+            document.write(number+'.');
+        </script>
+    </p>                                                                          
+    -->
+        <!--------------------------문항-------------------------->
+<!--<label class="cell_check">  input에 덮으면 hover, active 발생 --> 
+    <p><script>document.write(number, '.'); number +=1;</script>
+        다음 중 나와 비슷한 사람은 몇 명 인가요?
+    </p>
+    <ul>
+    <li>나는 일이 잘 안 됐을 때 후회하기 보다는 앞으로의 계획을 세우는데 더 집중한다.</li>
+    <li>나는 평소에 용기와 힘을 주는 책을 읽는 것을 즐긴다.</li>
+    <li>나는 항상 나의 롤모델(존경하고 본받고 싶은 사람)이 있다.</li>
+    <li>나는 평소에 목표를 이룬 것처럼 자신감 있게 행동하곤 한다.</li>
+    <li>나는 일이 잘 안 풀리면 혼자서 생각하는 시간을 갖으며 의지를 다지곤 한다.</li>
+    </ul>
+    <br>
+        <div class="table">
+            <div class="row">
+            <span class="cell2 survaysname1">
+                <div class='p1'>없음</div>
+                <input type="radio" name="survay1" value="1" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>1~2명</div>
+                <input type="radio" name="survay1" value="2" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>3명</div>
+                <input type="radio" name="survay1" value="3" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>4명</div>
+                <input type="radio" name="survay1" value="4" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>5명</div>
+                <input type="radio" name="survay1" value="5" />
+            </span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <p><script>document.write(number, '.'); number +=1;</script>
+        다음 중 나와 비슷한 사람은 몇 명인가요?
+    </p>
+    <ul>
+    <li>나는 내가 무엇을 원하는지 알고 있다.</li>
+    <li>나는 내 목표를 구체적으로 적은 노트나 계획표가 있다.</li>
+    <li>나는 내가 좋다.</li>
+    <li>나는 특별하다.</li>
+    <li>나는 나를 자주 칭찬한다.</li>
+    <li>나는 행복한 사람이다.</li>
+    <li>나는 내 잘못을 쉽게 인정한다.</li>
+    <li>내 행동이 잘못되었다면 고칠 생각이 있다.</li>
+</ul>
+    <br>
+        <div class="table">
+            <div class="row">
+            <span class="cell2 survaysname1">
+                <div class='p1'>없음</div>
+                <input type="radio" name="survay2" value="1" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>1~2명</div>
+                <input type="radio" name="survay2" value="2" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>3~4명</div>
+                <input type="radio" name="survay2" value="3" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>5~6명</div>
+                <input type="radio" name="survay2" value="4" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>7~6명</div>
+                <input type="radio" name="survay2" value="5" />
+            </span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+<div class="flexbox1">
+   <!--onclick에 여러개 함수를 걸려면 next_Page; input();세미콜론을 이용하여 여러개 가능-->
+    <button type="button" class="survay-btn" onclick="previous_Page(1, 2, number-4)">이전</button>
+    <button type="button" class="survay-btn" onclick=" next_Page(1, count, number)">다음</button>
+</div>
+</body>  
+</html>

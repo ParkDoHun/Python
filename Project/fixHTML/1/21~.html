@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <!--<link rel="stylesheet" href="../CSS/page.css">-->
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40' >
+<br>
+<header class='header_1'>
+    레인보우학습역량검사
+</header>
+    
+    <!--문항 번호를 생성후 출력 및 연산-->
+    <!--
+    <p>
+        <script>
+            document.write(number+'.');
+        </script>
+    </p>                                                                          
+    -->
+        <!--------------------------문항-------------------------->
+<!--<label class="cell_check">  input에 덮으면 hover, active 발생 --> 
+    <p><script>document.write(number, '.'); number +=1;</script>
+        다음 문장을 순서에 맞게 가장 잘 배열한 것을 고르세요.
+    </p>
+    <ul>
+    <li>좋은 성적을 받게 될 것을 생각하며 열심히 공부한다.</li>
+    <li>과제를 하면 스스로 어떤 보상을 주기로 약속한다.</li>
+    <li>숙제는 재미에 초점을 맞춰 즐겁게 한다.</li>
+    <li>학교에서는 공부를 잘해야 한다고 자신에게 말한다.</li>
+    <li>공부할 수 있는 양을 유지하도록 자신을 설득한다.</li>
+    <li>전에 한 것보다 더 잘 할 수 있다고 자신을 압박한다.</li>
+    <li>공부해야 하는 것을 흥미로운 것과 연결 지으려고 노력한다.</li>
+    <li>할 수 있는 한 많이 배우고 공부해야 한다고 자신에게 말한다.</li>
+</ul>
+        <br>
+        <div class="table">
+            <div class="row">
+            <span class="cell2 survaysname1">
+                <div class='p1'>ㄱ-ㄴ-ㄷ-ㄹ-ㅁ</div>
+                <input type="radio" name="survay1" value="1" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>ㄴ-ㄱ-ㄷ-ㄹ-ㅁ</div>
+                <input type="radio" name="survay1" value="2" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>ㄱ-ㄹ-ㅁ-ㄴ-ㄷ</div>
+                <input type="radio" name="survay1" value="3" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>ㄷ-ㄱ-ㄴ-ㄹ-ㅁ</div>
+                <input type="radio" name="survay1" value="4" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>ㄷ-ㄱ-ㄹ-ㅁ-ㄴ</div>
+                <input type="radio" name="survay1" value="5" />
+            </span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <p><script>document.write(number, '.'); number +=1;</script>
+        다음 중 나에게 해당되는 내용은 몇 개인가요?
+    </p>
+    <ul>
+    <li>남의 장점을 빠르게 파악한다.</li>
+    <li> 어떤 일이든 주도적으로 참여하고 적극적으로 대처한다.</li>
+    <li>독단적으로 결정하기보다는 의견을 수렴하는 편이다.</li>
+    <li>친구나 다른 사람에게 자신의 목표에 대해 이야기하기를 좋아한다.</li>
+    <li>동아리나 소모임에 적극적으로 참여한다.</li>
+    <li>도움을 받는 것보다 주는게 편하다.</li>
+    <li>여러 사람과 대화하는게 익숙하다.</li>
+    <li>나보다 남을 먼저 생각하고 더 배려한다.</li>
+    <li>모르는 사람과 쉽게 어울린다.</li>
+    <li>모임을 해야 할 때는 여러 사람에게 연락해 약속을 직접 잡는다.</li>
+    <li>주변 사람에게 칭찬을 자주한다.</li>
+    <li>남이 실수해도 관대하다.</li>
+</ul>
+    <br>
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname1">
+            <div class='p1'>없음</div>
+            <input type="radio" name="survay2" value="1" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>1~3개</div>
+            <input type="radio" name="survay2" value="2" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>4~6개</div>
+            <input type="radio" name="survay2" value="3" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>7~9개</div>
+            <input type="radio" name="survay2" value="4" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>10~12개</div>
+            <input type="radio" name="survay2" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+   <!--onclick에 여러개 함수를 걸려면 next_Page; input();세미콜론을 이용하여 여러개 가능-->
+    <button type="button" class="survay-btn" onclick="previous_Page(1, 2, number-4)">이전</button>
+    <button type="button" class="survay-btn" onclick=" next_Page(1, count, number)">다음</button>
+</div>
+</body>  
+</html>

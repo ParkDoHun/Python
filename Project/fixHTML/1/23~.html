@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <!--<link rel="stylesheet" href="../CSS/page.css">-->
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40' >
+<br>
+<header class='header_1'>
+    레인보우학습역량검사
+</header>
+    
+    <!--문항 번호를 생성후 출력 및 연산-->
+    <!--
+    <p>
+        <script>
+            document.write(number+'.');
+        </script>
+    </p>                                                                          
+    -->
+        <!--------------------------문항-------------------------->
+<!--<label class="cell_check">  input에 덮으면 hover, active 발생 --> 
+    <p><script>document.write(number, '.'); number +=1;</script>
+        다음 중 나에게 해당되는 내용은 몇 개인가요?
+    </p>
+    <ul>
+    <li>나는 정답이 하나가 아니고 여러 개의 해답이 있는 문제를 더 좋아한다.</li>
+    <li> 나는 다양한 분야의 문제에 골고루 관심이 있다.</li>
+    <li>나는 어떤 문제가 잘 해결되지 않더라고, 몇 시간씩 그 문제에 대해서 생각하고 이야기하는 것이 좋다.</li>
+    <li>나는 평소에 내가 잘 모르는 것에 대해서 배우는 것을 좋아한다.</li>
+    <li>나는 어떤 문제가 잘 풀리지 않더라도 문제가 풀릴 때까지 끝까지 포기하지 않고 생각해본다.</li>
+</ul>
+    <br>
+        <div class="table">
+            <div class="row">
+            <span class="cell2 survaysname1">
+                <div class='p1'>없음</div>
+                <input type="radio" name="survay1" value="1" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>1개</div>
+                <input type="radio" name="survay1" value="2" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>2~3개</div>
+                <input type="radio" name="survay1" value="3" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>4개</div>
+                <input type="radio" name="survay1" value="4" />
+            </span>
+            <span class="cell2 survaysname1">
+                <div class='p1'>5개</div>
+                <input type="radio" name="survay1" value="5" />
+            </span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <p><script>document.write(number, '.'); number +=1;</script>
+        다음 중 당신과 비슷한 사람은 몇 명인가요?
+    </p>
+    <ul>
+    <li>나는 수학공식을 그냥 외우는 것보다 가능하면 자연스럽게 외워질 때까지 여러번 증명해보는 편이다</li>
+    <li>나는 나라이름을 외울 때도 그냥 외우기 보다는 지도를 보며 외우는 걸 더 좋아한다</li>
+    <li>나는 외울 것이 많은 과목 일수록 시험 직전에 한꺼번에 외우면 결과가 더 안좋다.</li>
+    <li>나는 암기해야 하는 것이 많을 때 비슷한 것 끼리 연결 지어서 묶음으로 만들어 외우기도 한다.</li>
+    <li>나는 암기해야 하는 것이 많을 때 마인드 맵처럼 표를 그려가며 외우기도 한다.</li>
+    <li>나는 암기해야 하는 것이 많을 때 내가 좋아하는 노래의 가사로 만들어 외우기도 한다.</li>
+    <li>나는 암기해야 하는 것이 많을 때 연관 있는 그림을 생각하며 외우기도 한다.</li>
+</ul>
+    <br>
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname1">
+            <div class='p1'>없음</div>
+            <input type="radio" name="survay2" value="1" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>1~2명</div>
+            <input type="radio" name="survay2" value="2" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>3~4명</div>
+            <input type="radio" name="survay2" value="3" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>5~6명</div>
+            <input type="radio" name="survay2" value="4" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>7명</div>
+            <input type="radio" name="survay2" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+   <!--onclick에 여러개 함수를 걸려면 next_Page; input();세미콜론을 이용하여 여러개 가능-->
+    <button type="button" class="survay-btn" onclick="previous_Page(1, 2, number-4)">이전</button>
+    <button type="button" class="survay-btn" onclick=" next_Page(1, count, number)">다음</button>
+</div>
+</body>  
+</html>
