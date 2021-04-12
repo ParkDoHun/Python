@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_4'>
+        특성화고 검사
+    </header>
+
+ 
+    <h3>전문교과 성취도 </h3>
+
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    다음 중 당신에게 해당되는 내용은 몇 개인가요?
+</p>
+<ul>
+    <li>성격이 급해 쉽게 화내고 또 금방 풀린다.</li>
+    <li>온라인상의 게임, 가상현실 속에서도 내 맘대로 되지 않아 화가 난 적이 여러 번 있다. </li>
+    <li>분노를 조절하기 어렵고 어떻게 해야 할지 모르겠다.</li>
+    <li> 잘한 일은 칭찬 받아야 하고 그렇지 않으면 화가 난다.</li>
+    <li>다른 사람의 잘못은 꼭 짚고 넘어가야 하며 이로 인해 트러블이 생긴다. </li>
+    <li>화가 나면 타인에게 폭언, 폭력을 가한다. </li>
+    <li>분노가 극에 달해 운 적이 있다.  </li>
+    <li>잘못에 대한 책임을 타인에게 돌려 탓한 적이 있다. </li>
+    <li>화가 나면 물건을 주위에 집어던진다. </li>
+    <li>다른 사람이 나를 무시한다고 느끼고 억울한 감정이 자주 든다.</li>
+    <li>화를 조절하지 못해 일을 망친 적이 있다. </li>
+    <li>일이 잘 안 풀리면 문제를 해결하기보다 쉽게 조절하고 포기하는 편이다.</li>
+</ul>
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname1">
+            <div class='p1'>0개</div>
+            <input type="radio" name="survay1" value="1" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>3~4개</div>
+            <input type="radio" name="survay1" value="2" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>5~6개</div>
+            <input type="radio" name="survay1" value="3" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>7~8개</div>
+            <input type="radio" name="survay1" value="4" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>9~12개</div>
+            <input type="radio" name="survay1" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    당신은 지금까지 '왜 사는가', '어떻게 살 것인가', '무엇이 될 것인가'에 대해 고민해 봤습니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay2" value="1" /> <span>현재 일에 충실하기 때문에 그런 고민은 거의 하지 않습니다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="2" /> <span>한번 쯤 잠시 생각해본 것 같아요.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="3" /> <span>가끔 그런 생각이 들지만 깊이 생각하진 않습니다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="4" /> <span>깊이 고민해본 경험이 있습니다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="5" /> <span>그 고민을 해결하기 위해 항상 많은 생각을 합니다.</span></label><br>
+</div>
+<br>
+
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(4, 2, number-4)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(4, count, number)">다음</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+<br>
+<header class="header_5">
+    개인상담 검사
+</header><br>
+<!--예시-->
+<fieldset>
+<legend>예시</legend>
+<div class="table_ex">
+    <div class="row">
+        <span class="cell col0">11</span>
+        <span class="cell col3">어떤 물건이든 케이스에 보관하기 보다는 눈에 잘 띄는 곳에 두고 사용하는 편이다.</span>
+    </div>
+</div>
+<br>
+
+    <div class="table_ex">
+        <div class="row">
+            <span class="cell col0">그렇지 않다</span>
+            <span class="cell col0"></span>
+            <span class="cell col0">보통이다</span>
+            <span class="cell col0"></span>
+            <span class="cell col0">매우 그렇다</span>
+        </div>
+        <div class="row">
+        <span class="cell survaysname1">
+            <input type="radio" name="survay0" value="1" />
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay0" value="2" />
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay0" value="3" />
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay0" value="4" checked/>
+        </span>
+        <span class="cell survaysname1">
+            <input type="radio" name="survay0" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+</fieldset>
+<br>
+<br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    나는 새로운 관심사가 생겨서 기존의 것에 소홀해진 적이 있다.
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">그렇지 않다</div>
+                <input type="radio" name="survay1" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay1" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay1" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay1" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 그렇다</div>
+                <input type="radio" name="survay1" value="5" />
+            </span>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    잠도 깨고 맑은 정신을 유지하기 위해 커피나 녹차를  마신다.
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">그렇지 않다</div>
+                <input type="radio" name="survay2" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay2" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay2" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay2" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 그렇다</div>
+                <input type="radio" name="survay2" value="5" />
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    밤에 잠을 충분히 자서 낮 시간에는 별로 졸리지 않다.
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">그렇지 않다</div>
+                <input type="radio" name="survay3" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay3" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay3" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">&nbsp;</div>
+                <input type="radio" name="survay3" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 그렇다</div>
+                <input type="radio" name="survay3" value="5" />
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(5, 2, number-5)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(5, count, number)">다음</button>
+</div>
+</body>
+</html>

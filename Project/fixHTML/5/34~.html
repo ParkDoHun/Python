@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_5'>
+        개인상담검사
+    </header>
+    <br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    부모님과 나의 관계는 어떻습니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay1" value="1" /> <span>매우 편하고 고민도 잘 털어놓을 수 있지만 가끔 싸우기도 한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="2" /> <span>무조건 내 편에서 내가 원하는 건 다 해주신다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="3" /> <span>부모님이 나에게 원하는 것이 있으며 나는 무조건 부모님의 의견을 따라야 한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="4" /> <span>부모님은 너무 바쁘셔서 나에게 신경은 많이 못써주시고 그것에 대해 미안해하시지만, 나는 스스로 알아서 생활하고 있다.</span></label><br>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    부모님은 나의 학습과 생활에 어떻게 관여하십니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay2" value="1" /> <span>나의 학습내용과 계획을 다 알고, 부족한 부분에 대한 조언 및 효과적 공부방법에 대해 알려주신다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="2" /> <span>부모님은 나의 학습상황이나 생활패턴에 대해 잘 모르시지만 나를 믿고 맡겨주신다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="3" /> <span>부모님은 나의 학습목표나 진로, 생활내용에 대해 항상 어떻게 해야 하는지 말씀을 하시지만, 학습내용이나 진도까지 체크하시지는 않는다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="4" /> <span>부모님이 너무 바쁘셔서 학습이나 생활은 내가 혼자 알아서 한다.</span></label><br>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(5, 2, number-2)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(5, count, number)">다음</button>
+</div>
+</body>
+</html>

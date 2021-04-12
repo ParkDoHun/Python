@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_5'>
+        개인상담검사
+    </header>
+    <br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    내가 예상한 내용이 시험문제로 나올 확률이 어느 정도나 됩니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay1" value="1" /> <span>시험 문제를 예상해보았자 그대로 나오는 것이 아니어서 잘 하지 않는 편이다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="2" /> <span>시험 문제를 예상해보는 것이 도움이 된다고 해서 시도는 종종 해보지만, 전반적으로 잘 맞지 않는 편이고, 그 효과성도 잘 모르겠다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="3" /> <span>시험 문제가 예상대로 잘 나오는 편이며, 좋은 성적을 얻는 데 도움이 되는 것 같다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="4" /> <span>내가 예상한 시험 문제의 출제 빈도가 매우 높아 시험보기 전에 많이 해보는 편이다.</span></label><br>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    잠자는 습관은 어떻습니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay2" value="1" /> <span>취침시간과 기상시간이 규칙적인 편이어서 잠이 조금 부족하긴 하지만, 생활에 지장을 주진 않는다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="2" /> <span>잠이 너무 많은 편이어서 취침시간에 관계 없이 아침에 일어나기가 힘들다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="3" /> <span>게임이나 TV, 휴대폰 등 다른 요소들에 의해서 늦게 자는 경우가 꽤 있는 편이다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="4" /> <span>졸리면 시간에 관계없이 자고, 다음 날 등교 시간에 맞춰 일어나는 편이다.</span></label><br>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(5, 2, number-4)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(5, count, number)">다음</button>
+</div>
+</body>
+</html>

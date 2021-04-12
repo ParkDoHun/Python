@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_5'>
+        개인상담검사
+    </header>
+    <br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    집중에 가장 방해되는 요소는 무엇입니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay1" value="1" /> <span>친구가 찾아오거나 연락을 한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="2" /> <span>가족들이 방안을 자주 들락거리거나 소음을 유발한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="3" /> <span>주위의 사물들이나 컴퓨터, TV, 취미용품들에 자꾸 마음이 끌린다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="4" /> <span>자꾸 공부내용 외에 다른 생각이 난다.</span></label><br>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    공부를 많이 방해하는 생각은 주로 어떤 것입니까? (중복선택 가능)
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay2" value="1" /> <span>외모에 대한 고민</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="2" /> <span>이성 친구 및 교우관계에 대한 고민</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="3" /> <span>가족관계에 대한 고민 및 불만</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="4" /> <span>공부 외에 하고 싶은 일들에 대한 생각</span></label><br>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(5, 2, number-4)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(5, count, number)">다음</button>
+</div>
+</body>
+</html>

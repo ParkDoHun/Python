@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_4'>
+        특성화고 검사
+    </header>
+
+ 
+    <h3>전문교과 성취도 </h3>
+
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    다음 중 당신에게 해당되는 내용은 몇 개인가요?
+</p>
+<ul>
+    <li>선택은 쉽게 하지 않지만 한 번 시작하면 끝까지 밀고 나간다.</li>
+    <li>공포영화를 보면 하지 말라는 행동을 하는 인물 때문에 짜증이 나곤 한다.</li>
+    <li>남에게 피해를 끼치면 밤에 잠이 잘 오질 않는다.</li>
+    <li>한 번 싫은 것은 거의 변함없이 싫다.</li>
+    <li>내 몫은 끝까지 미루지 않고 완료한다.</li>
+    <li>갈등은 빨리 해소하는 것이 좋기 때문에 타협과 중재를 잘한다.</li>
+    <li>나는 기억력이 좋은 편이라 누군가의 칭찬, 비난 등을 또렷이 기억한다.</li>
+    <li>다른 사람과 있을 때 나랑 있는 것이 창피하지 않을까 걱정한다.</li>
+</ul>
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname1">
+            <div class='p1'>0개</div>
+            <input type="radio" name="survay1" value="1" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>1~2개</div>
+            <input type="radio" name="survay1" value="2" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>3~4개</div>
+            <input type="radio" name="survay1" value="3" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>5~6개</div>
+            <input type="radio" name="survay1" value="4" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>7~8개</div>
+            <input type="radio" name="survay1" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    다음 중 당신에게 해당되는 내용은 몇 개인가요?
+</p>
+<ul>
+    <li>남의 장점을 빠르게 파악한다.</li>
+    <li>주도적으로 업무를 수행하고 적극적으로 대처한다.</li>
+    <li>독단적으로 결정하기보다는 의견을 수렴하는 편이다.</li>
+    <li>친구나 동료에게 자신의 목표에 대해 이야기하기를 좋아한다.</li>
+    <li>정기적으로 참석하는 모임이 있다.</li>
+    <li>도움을 받는 것보다 주는 것이 편하다.</li>
+    <li>여러 사람과 대화하는 것이 익숙하다.</li>
+    <li>나보다 남을 먼저 생각하고 더 배려한다.</li>
+    <li>모르는 사람과 쉽게 어울린다.</li>
+    <li>회식이나 단체 모임 같은 다수의 약속을 직접 잡는다.</li>
+    <li>주변 사람에게 칭찬을 자주한다.</li>
+    <li>남이 실수해도 관대하다.</li>
+</ul>
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname1">
+            <div class='p1'>0~2개</div>
+            <input type="radio" name="survay2" value="1" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>3~4개</div>
+            <input type="radio" name="survay2" value="2" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>5~6개</div>
+            <input type="radio" name="survay2" value="3" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>7~8개</div>
+            <input type="radio" name="survay2" value="4" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>9~12개</div>
+            <input type="radio" name="survay2" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(4, 2, number-4)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(4, count, number)">다음</button>
+</div>
+</body>
+</html>

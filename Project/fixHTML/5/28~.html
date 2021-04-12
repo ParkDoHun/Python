@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_5'>
+        개인상담검사
+    </header>
+    <br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    학교 수업은 잘 듣는 편입니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay1" value="1" /> <span>모든 수업을 졸지 않고 잘 듣는 편이며, 내용을 빠트리지 않으려고 노력했다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="2" /> <span>대부분 열심히 들으려고 노력하지만, 여러 이유로 수업 내용은 조금씩 빠뜨리는 경우가 있다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="3" /> <span>좋아하는 과목만 열심히 듣고 나머지는 잘 듣지  않는다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="4" /> <span>학교 수업은 거의 듣지 않는 편이다.</span></label><br>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    학교수업,  학원 및 과외를 제외하고 스스로 공부는 하루에 얼마나 합니까? (숙제, 예습, 복습, 그 외 자율학습 모두 포함)
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay2" value="1" /> <span>꼭 해야 하는 숙제만 할 뿐, 스스로 공부는 잘 하지 못하는 편이다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="2" /> <span>수업을 충실히 들을 수 있도록 숙제, 예습 및 복습에 시간을 투자한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="3" /> <span>숙제와 꼭 필요하다고 생각되는 학원 수업 시간을 제외하고는 과목별로 좋다고 소문난 여러 참고서와 문제집을 병행하여 성적향상을 위해 스스로 공부는 시간을 갖는 편이다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="4" /> <span>학교수업, 학원 및 과외에 하루 중 거의 대부분의 시간을 소비하기 때문에 혼자 공부하는 시간이 거의 없다.</span></label><br>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(5, 2, number-4)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(5, count, number)">다음</button>
+</div>
+</body>
+</html>

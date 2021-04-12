@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+
+    </script>
+
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+<br>
+<header class="header_2">
+    특성화고 검사 설문조사
+</header><br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    생각하지 못했던 질문을 받았을 때 당황하지 않고 자신의 생각을 설명 할 수 있나요?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">아주 어렵다</div>
+                <input type="radio" name="survay1" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">어렵다</div>
+                <input type="radio" name="survay1" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay1" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">할 수 있다</div>
+                <input type="radio" name="survay1" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 잘 한다</div>
+                <input type="radio" name="survay1" value="5" />
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    여러 사람 앞에서 발표하는 것이 어렵지는 않나요?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">아주 어렵다</div>
+                <input type="radio" name="survay2" value="1" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">어렵다</div>
+                <input type="radio" name="survay2" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay2" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">할 수 있다</div>
+                <input type="radio" name="survay2" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 잘 한다</div>
+                <input type="radio" name="survay2" value="5" />
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    평소 다른 사람과 이야기 할 때 상대방의 얘기를 잘 이해하나요?
+</p>
+<div class="table">
+    <div class="row">
+        <span class="cell2 survaysname1">
+            <div class="p1">아주 어렵다</div>
+            <input type="radio" name="survay3" value="1" />
+        </span>
+        <span class="cell2 survaysname1" >
+            <div class="p1">어렵다</div>
+            <input type="radio" name="survay3" value="2" />
+        </span>
+        <span class="cell2 survaysname1" >
+            <div class="p1">보통이다</div>
+            <input type="radio" name="survay3" value="3" />
+        </span>
+        <span class="cell2 survaysname1" >
+            <div class="p1">할 수 있다</div>
+            <input type="radio" name="survay3" value="4" />
+        </span>
+        <span class="cell2 survaysname1" >
+            <div class="p1">매우 잘 한다</div>
+            <input type="radio" name="survay3" value="5" />
+        </span>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    여럿이 모여서 토론 하는 경우 자신의 의견을 잘 이야기 하나요?
+</p>
+<div class="table">
+    <div class="row">
+        <span class="cell2 survay0_radio">
+            <div class="p1">아주 어렵다</div>
+            <input type="radio" name="survay4" value="1" />
+        </span>
+        <span class="cell2 survay0_radio" >
+            <div class="p1">어렵다</div>
+            <input type="radio" name="survay4" value="2" />
+        </span>
+        <span class="cell2 survay0_radio" >
+            <div class="p1">보통이다</div>
+            <input type="radio" name="survay4" value="3" />
+        </span>
+        <span class="cell2 survay0_radio" >
+            <div class="p1">할 수 있다</div>
+            <input type="radio" name="survay4" value="4" />
+        </span>
+        <span class="cell2 survay0_radio" >
+            <div class="p1">매우 잘 한다</div>
+            <input type="radio" name="survay4" value="5" />
+        </span>
+    </div>
+</div>
+<br>
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(4, 4, number-8)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(4, count, number)">다음</button>
+</div>
+</body>
+</html>

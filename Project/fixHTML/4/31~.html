@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_4'>
+        특성화고 검사
+    </header>
+
+ 
+    <h3>전문교과 성취도 </h3>
+
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    다음은 다양한 사람의 신념입니다. 가장 마음에 드는 신념을 선택해 보세요.
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay1" value="1" /> <span>규칙에 예외란 없다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="2" /> <span>의심될 때는 하지마라.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="3" /> <span>인내는 최고의 미덕이다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="4" /> <span>달릴 수 있는데 걷지 마라.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="5" /> <span>규칙을 바꿀 수 없으면 규칙을 무시해라.</span></label><br>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    당신은 친구나 동료들과 무엇을 결정할 때 주로 어떻게 행동하시나요?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay2" value="1" /> <span>의견을 발표하는 것이므로 상대방을 설득하는 것이 가장 중요하다고 생각한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="2" /> <span>무엇보다 주제에 맞는 내용 자체가 가장 중요하다고 생각한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="3" /> <span>밝은 표정으로 말하는 것이 가장 중요하다고 생각한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="4" /> <span>상대가 공감할 수 있는 예시를 들어가며 말하는 것이 가장 중요하다고 생각한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="5" /> <span>나의 진심을 담아 전달하는 것이 가장 중요하다고 생각한다.</span></label><br>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(4, 3, number-5)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(4, count, number)">다음</button>
+</div>
+</body>
+</html>

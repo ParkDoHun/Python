@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_5'>
+        개인상담검사
+    </header>
+    <br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    주로 친하게 지내는 친구들과의 관계는 어떻습니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay1" value="1" /> <span>내 주위의 친구들은 친하기는 하지만, 나보다 공부에 관심이 없는 편이며, 가끔은 공부할 때도 자주 연락이 오거나 놀러 가자고 하는 경우도 있다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="2" /> <span>성적이 비슷한 아이들과 비슷한 학원을 다니고 있어서 학습스타일도 잘 아는 편이지만, 마음속으로는 경쟁자로 여기고 있기 때문에 아주 친한 친구로 생각하지는 않는다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="3" /> <span>내 주위 친구들은 공부를 잘 해서 내가 모르는 걸 물어보면 잘 알려주고, 친구들의 공부모습을 보면서 자극을 받기도 한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="4" /> <span>친하게 지내는 친구가 별로 없다. 놀 때나 공부할 때 혼자 하는 걸 좋아한다.</span></label><br>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    담임 선생님과의 관계는 어떻습니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay2" value="1" /> <span>나를 예뻐해주셔서 나도 선생님과 친하게 지낸다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="2" /> <span>선생님들은 내가 공부만 잘하고 학생이라고 생각할 뿐이어서 나도 선생님을 좋아하는 편은 아니다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="3" /> <span>선생님들은 나를 공부도 못하고 태도도 불량한 학생으로 생각해서 나도 선생님과 자주 마주치려고 하지 않는다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="4" /> <span>나는 선생님 관심 밖의 학생이다.</span></label><br>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(5, 2, number-4)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(5, count, 187)">다음</button>
+</div>
+<!-- <script>
+    window.onload = window.onpageshow = function (event) {
+     if (event.persisted || window.performance && window.performance.navigation.type == 2) { 
+
+    previous_Page(5, 2, number-2);
+
+        } else { 
+
+             console.log('새로 열린 페이지');
+
+    } 
+};
+
+</script> -->
+</body>
+</html>

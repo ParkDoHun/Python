@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_5'>
+        개인상담검사
+    </header>
+    <br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    영어 지문을 독해 할 때 모르는 어휘가 나오면 어떻게 합니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay1" value="1" /> <span>대략 맥락을 통해 의미를 유추해보고 넘어간다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="2" /> <span>사전을 찾아서 뜻만 알아보고 넘어간다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="3" /> <span>수첩에 정리하고 외운다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="4" /> <span>어휘의 활용과 확장된 쓰임, 유의, 반의어, 관련 예문도 같이 정리하여 익힌다.</span></label><br>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    암기는 어떻게 합니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay2" value="1" /> <span>늘 암기할 사항을 가지고 다니면서, 반복적으로 보면서 외운다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="2" /> <span>시험 전에만 암기할 사항을 가지고 다니면서, 외우려고 한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="3" /> <span>당일 공부할 내용을 머리 속에 떠올리며 오래 기억해보려고 노력한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="4" /> <span>외울 내용을 한번에 몰아서 암기한다.</span></label><br>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(5, 2, number-4)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(5, count, number)">다음</button>
+</div>
+</body>
+</html>

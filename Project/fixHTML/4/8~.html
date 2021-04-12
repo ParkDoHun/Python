@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_4'>
+        특성화고 검사
+    </header>
+
+ 
+    <h3>학교 생활</h3>
+
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    학교생활 중 읽은 책의 권수는 몇 권인가요?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survay0_radio">
+                <div class="p1">없음</div>
+                <input type="radio" name="survay1" value="1" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">1~2권</div>
+                <input type="radio" name="survay1" value="2" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">3~4권</div>
+                <input type="radio" name="survay1" value="3" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">5~6권</div>
+                <input type="radio" name="survay1" value="4" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">7권 이상</div>
+                <input type="radio" name="survay1" value="5" />
+            </span>
+          
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    학교생활 중 희망하는 취업분야는 어느 분야인가요?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survay0_radio">
+                <div class="p1">없음</div>
+                <input type="radio" name="survay2" value="1" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">공기업</div>
+                <input type="radio" name="survay2" value="2" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">공무원</div>
+                <input type="radio" name="survay2" value="3" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">중소기업</div>
+                <input type="radio" name="survay2" value="4" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">대기업</div>
+                <input type="radio" name="survay2" value="5" />
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    학교생활 중 가장 중요하게 생각하는 활동은 무엇인가요?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survay0_radio">
+                <div class="p1">동아리</div>
+                <input type="radio" name="survay3" value="1" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">자격증</div>
+                <input type="radio" name="survay3" value="2" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">대회</div>
+                <input type="radio" name="survay3" value="3" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">성적관리</div>
+                <input type="radio" name="survay3" value="4" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">취업행사참여</div>
+                <input type="radio" name="survay3" value="5" />
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(4, 4, number-7)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(4, count, number)">다음</button>
+</div>
+</body>
+</html>

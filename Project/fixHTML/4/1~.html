@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = 1;
+        count = 1;
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_4'>
+        특성화고 검사
+    </header>
+
+    
+<!--예시-->
+<fieldset>
+    <legend>예시</legend>
+  
+        <div class="table_ex" style="font-weight: 800;">
+            <div class="row">
+                <span class="cell col0">1단계</span>
+                <span class="cell col0">2단계</span>
+                <span class="cell col0">3단계</span>
+            </div>
+            <div class="row">
+                <span class="cell col0">학교생활</span>
+                <span class="cell col0">취업준비상태</span>
+                <span class="cell col0">자소서</span>
+            </div>
+            <div class="row">
+                <span class="cell col0">성적관리</span>
+                <span class="cell col0">자격증</span>
+                <span class="cell col0">면접</span>
+            </div>
+            <div class="row">
+                <span class="cell col0">희망취업분야</span>
+                <span class="cell col0">대회</span>
+                <span class="cell col0">&nbsp;</span>
+            </div>
+        </div>
+    </div>
+    </fieldset>
+    <br>
+    <br>
+
+    <h3>학교 생활</h3>
+
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    학교생활 중 출결사항에서 무단 조퇴가 몇 개인가요?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survay0_radio">
+                <div class="p1">없음</div>
+                <input type="radio" name="survay1" value="1" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">1~2개</div>
+                <input type="radio" name="survay1" value="2" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">3~4개</div>
+                <input type="radio" name="survay1" value="3" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">5~6개</div>
+                <input type="radio" name="survay1" value="4" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">7개 이상</div>
+                <input type="radio" name="survay1" value="5" />
+            </span>
+          
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    학교생활 중 출결사항에서 무단 미인정(결석)이 몇 개인가요?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survay0_radio">
+                <div class="p1">없음</div>
+                <input type="radio" name="survay2" value="1" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">1~2개</div>
+                <input type="radio" name="survay2" value="2" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">3~4개</div>
+                <input type="radio" name="survay2" value="3" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">5~6개</div>
+                <input type="radio" name="survay2" value="4" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">7개 이상</div>
+                <input type="radio" name="survay2" value="5" />
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    학교생활 중 학급 반장, 부반장을 한 횟수는 몇 번인가요?
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survay0_radio">
+                <div class="p1">없음</div>
+                <input type="radio" name="survay3" value="1" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">1번</div>
+                <input type="radio" name="survay3" value="2" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">2번</div>
+                <input type="radio" name="survay3" value="3" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">3번</div>
+                <input type="radio" name="survay3" value="4" />
+            </span>
+            <span class="cell2 survay0_radio" >
+                <div class="p1">4번 이상</div>
+                <input type="radio" name="survay3" value="5" />
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="location.href = '../../main.html'">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(4, count, number)">다음</button>
+</div>
+</body>
+</html>

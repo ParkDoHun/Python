@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+    <br>
+    <header class='header_5'>
+        개인상담검사
+    </header>
+    <br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    공부를 하는 이유가 무엇입니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay1" value="1" /> <span>내가 가고 싶은 대학에 진학하고 내가 하고 싶은 직업적 목표를 성취하기 위해 공부한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="2" /> <span>모르는 것을 알아가고 새로운 사실을 알게 되는 것을 좋아하기 때문에 하게 된다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="3" /> <span>부모님이나 주위 사람들이 원하기 때문에 그 사람들과의 관계를 고려하여 하기는 싫지만 해야 한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay1" value="4" /> <span>공부를 왜 해야 하는지 잘 모르겠다.</span></label><br>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    수업을 들을 때의 태도는 어떻습니까?
+</p>
+
+<br>
+<div class="LeftPadd">
+        <label><input style="width: auto;" type="radio" name="survay2" value="1" /> <span>수업을 집중해서 들으면서 중요한 내용을 파악하고 시험에 나올 부분들이 어떤 부분인지 생각한다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="2" /> <span>수업을 집중해서 듣기는 하지만 내용이 잘 이해 안되고 중요한 부분도 잘 모르겠다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="3" /> <span>예습이나 선행학습을 한 탓에 수업내용이 대부분 너무 쉽고 지루하게 느껴진다.</span></label><br>
+        <label><input style="width: auto;" type="radio" name="survay2" value="4" /> <span>보통 수업을 잘 듣지 않고 내 할 일을 할 때가  많다.</span></label><br>
+</div>
+<br>
+<br>
+
+
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(5, 2, number-4)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(5, count, number)">다음</button>
+</div>
+</body>
+</html>
