@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+<br>
+<header class="header_2">
+진로맞춤 설문조사
+</header><br>
+
+<!--------------문항-------------->
+<p><script>document.write(number, '.'); number +=1;</script>
+    지리나 지구과학에 관심이 많으며 지하자원의 개발이나 국토개발에 필요한 내용을 깊이 있게 배우고 싶다.
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">전혀 그렇지 않다</div>
+                <input type="radio" name="survay1" value="1" /></label>
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">그렇지 않다</div>
+                <input type="radio" name="survay1" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay1" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">그렇다</div>
+                <input type="radio" name="survay1" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 그렇다</div>
+                <input type="radio" name="survay1" value="5" />
+            </span>
+    </div>
+</div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    역사에 흥미도 많고 다양한 유물로 인간과 사회문제에 대해 공부하는 것도 좋다.
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">전혀 그렇지 않다</div>
+                <input type="radio" name="survay2" value="1" /></label>
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">그렇지 않다</div>
+                <input type="radio" name="survay2" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay2" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">그렇다</div>
+                <input type="radio" name="survay2" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 그렇다</div>
+                <input type="radio" name="survay2" value="5" />
+            </span>
+    </div>
+</div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    의학과 공학 둘 중 하나를 선택하기 어려울 만큼 두 분야에 관심이 많다.
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">전혀 그렇지 않다</div>
+                <input type="radio" name="survay3" value="1" /></label>
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">그렇지 않다</div>
+                <input type="radio" name="survay3" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay3" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">그렇다</div>
+                <input type="radio" name="survay3" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 그렇다</div>
+                <input type="radio" name="survay3" value="5" />
+            </span>
+    </div>
+</div>
+</div>
+<br>
+<br>
+
+<p><script>document.write(number, '.'); number +=1;</script>
+    중학생이나 고등학생을 대상으로 수업하는 교사가 되고 싶다.
+</p>
+    <div class="table">
+        <div class="row">
+            <span class="cell2 survaysname1">
+                <div class="p1">전혀 그렇지 않다</div>
+                <input type="radio" name="survay4" value="1" /></label>
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">그렇지 않다</div>
+                <input type="radio" name="survay4" value="2" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">보통이다</div>
+                <input type="radio" name="survay4" value="3" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">그렇다</div>
+                <input type="radio" name="survay4" value="4" />
+            </span>
+            <span class="cell2 survaysname1" >
+                <div class="p1">매우 그렇다</div>
+                <input type="radio" name="survay4" value="5" />
+            </span>
+    </div>
+</div>
+</div>
+<br>
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(2, 4, number-8)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(2, count, number)">다음</button>
+</div>
+</body>
+</html>

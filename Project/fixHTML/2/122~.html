@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <!--<link rel="stylesheet" href="../CSS/page.css">-->
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어온느 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+    <img class="img-logo" src="../img/logo.png" alt="logo" height='40' >
+    <br>
+    <header class='header_2'>
+        진로맞춤 설문조사
+    </header>
+
+    <h4>각각의 문항들에 대하여 좋고 싫음의 정도를 다음과 같이 표시해 주시기 바랍니다. (122~179번)</h4>
+    <!--예시-->
+    <fieldset>
+        <legend>예시</legend>
+        <div class="table_ex">
+            <div class="row">
+                <span class="cell col0">139</span>
+                <span class="cell col3">친환경 에너지에 관심이 있고 신소재를 이용한 학문을 탐구하고 싶다.</span>
+            </div>
+        </div>
+        <br>
+        
+        <div style="font-weight: 900;">친환경 에너지와 신소재를 이용한 학문에 대한 관심이 보통인 경우 다음과 같이 표시합니다</div>
+        <br>
+            <div class="table_ex">
+                <div class="row">
+                    <span class="cell col0">전혀 그렇지 않다</span>
+                    <span class="cell col0">그렇지 않다</span>
+                    <span class="cell col0">보통이다</span>
+                    <span class="cell col0">그렇다</span>
+                    <span class="cell col0">메우 그렇다</span>
+                </div>
+                <div class="row">
+                <span class="cell survaysname1">
+                    <input type="radio" name="survay0" value="1" />-2
+                </span>
+                <span class="cell survaysname1">
+                    <input type="radio" name="survay0" value="2" />-1
+                </span>
+                <span class="cell survaysname1">
+                    <input type="radio" name="survay0" value="3" />0
+                </span>
+                <span class="cell survaysname1">
+                    <input type="radio" name="survay0" value="4" checked/>1
+                </span>
+                <span class="cell survaysname1">
+                    <input type="radio" name="survay0" value="5" />2
+                </span>
+                </div>
+            </div>
+        </div>
+        </fieldset>
+        <br>
+        <br>
+        
+        <p><script>document.write(number,'.'); number +=1;</script>
+            영어공부가 재미있으며 외국인과의 대화도 두려워하지 않는다.
+        </p>
+
+            <div class="table">
+                <div class="row">
+                <span class="cell2 survaysname2">
+                    <div class='p1'>전혀 그렇지 않다</div>
+                    <input type="radio" name="survay1" value="1" />
+                </span>
+                <span class="cell2 survaysname2">
+                    <div class='p1'>그렇지 않다</div>
+                    <input type="radio" name="survay1" value="2" />
+                </span>
+                <span class="cell2 survaysname2">
+                    <div class='p1'>보통이다</div>
+                    <input type="radio" name="survay1" value="3" />
+                </span>
+                <span class="cell2 survaysname2">
+                    <div class='p1'>그렇다</div>
+                    <input type="radio" name="survay1" value="4" />
+                </span>
+                <span class="cell2 survaysname2">
+                    <div class='p1'>매우 그렇다</div>
+                    <input type="radio" name="survay1" value="5" />
+                </span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <p><script>document.write(number,'.'); number +=1;</script>
+            질병으로 인한 고통을 경감시키는 연구를 해보고 싶다.
+        </p>
+
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname2">
+            <div class='p1'>전혀 그렇지 않다</div>
+            <input type="radio" name="survay2" value="1" />
+        </span>
+        <span class="cell2 survaysname2">
+            <div class='p1'>그렇지 않다</div>
+            <input type="radio" name="survay2" value="2" />
+        </span>
+        <span class="cell2 survaysname2">
+            <div class='p1'>보통이다</div>
+            <input type="radio" name="survay2" value="3" />
+        </span>
+        <span class="cell2 survaysname2">
+            <div class='p1'>그렇다</div>
+            <input type="radio" name="survay2" value="4" />
+        </span>
+        <span class="cell2 survaysname2">
+            <div class='p1'>매우 그렇다</div>
+            <input type="radio" name="survay2" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+        <p><script>document.write(number,'.'); number +=1;</script>
+            간단한 질문에도 근본적인 해답을 찾으려고 노력하는 편이다.
+        </p>
+
+    <div class="table">
+        <div class="row">
+        <span class="cell2 survaysname1">
+            <div class='p1'>전혀 그렇지 않다</div>
+            <input type="radio" name="survay3" value="1" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>그렇지 않다</div>
+            <input type="radio" name="survay3" value="2" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>보통이다</div>
+            <input type="radio" name="survay3" value="3" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>그렇다</div>
+            <input type="radio" name="survay3" value="4" />
+        </span>
+        <span class="cell2 survaysname1">
+            <div class='p1'>매우 그렇다</div>
+            <input type="radio" name="survay3" value="5" />
+        </span>
+        </div>
+    </div>
+</div>
+<br>
+
+
+<div class="flexbox1">
+    <!--onclick에 여러개 함수를 걸려면 next_Page; input();세미콜론을 이용하여 여러개 가능-->
+    <button type="button" class="survay-btn" onclick="previous_Page(2, 4, number-7)">이전</button>
+    <button type="button" class="survay-btn" onclick=" next_Page(2, count, number)">다음</button>
+</div>
+
+</body>
+</html>

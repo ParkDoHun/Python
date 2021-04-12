@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)바론-진로맞춤형 선택과목 추천검사</title>
+    <link rel='stylesheet' href="../CSS/page_fix.css">
+
+    <!--funtion_data.js의 파일을 읽어오는 작업-->
+    <script language="javascript" type="text/javascript" src="../JS/funtion_data.js"></script>
+</head>
+<body>
+
+    <script>
+        number = splitNumber();
+        count = splitPage();
+    </script>
+    
+<img class="img-logo" src="../img/logo.png" alt="logo" height='40'>
+<br>
+<header class="header_2">
+    진로맞춤 설문조사
+</header>
+<!--------------예시-------------->
+    
+<h3>왼쪽과 오른쪽 문항을 비교하여 선호하는 쪽에 선호하는 만큼의 정도를 답안지에 표시해 주시기 바랍니다. (66~72번)</h3>
+
+<fieldset>
+    <legend>예시</legend>
+    <div class="table_ex">
+        <div class="row">
+            <span class="cell col0"></span>
+            <span class="cell col1">왼쪽</span>
+            <span class="cell col2">오른쪽</span>
+        </div>
+        <div class="row">
+            <span class="cell col0">67</span>
+            <span class="cell col4">사회변화를 분석하고 대안을 제시할 수 있는 능력을 갖추고 싶다.</span>
+            <span class="cell col4">인간 신체를 연구하고 질병의 예방과 치료법 또는 의약품에 대해 체계적인 공부를 해보고 싶다.</span>
+        </div>
+    </div>
+    <br>
+    
+    <div style="font-size: 14px;">인간 신체를 연구하고 질병의 예방과 치료법 또는 의약품에 대한 체계적인 공부(오른쪽)보다
+         사회변화를 분석하고 대안을 제시하는 능력을 함양하기(왼쪽)를 조금 더 원하는 경우 답안지에 다음과 같이 표시합니다.</div><br>
+    
+        <div class="table_ex">
+            <div class="row">
+                <span class="cell col0">왼쪽이 아주 좋다</span>
+                <span class="cell col0">왼쪽이 좋다</span>
+                <span class="cell col0">비슷하다</span>
+                <span class="cell col0">오른쪽이 좋다</span>
+                <span class="cell col0">오른쪽이 아주 좋다</span>
+            </div>
+            <div class="row">
+            <span class="cell survaysname1">
+                <input type="radio" name="survay0" value="1" />
+            </span>
+            <span class="cell survaysname1">
+                <input type="radio" name="survay0" value="2" checked/>
+            </span>
+            <span class="cell survaysname1">
+                <input type="radio" name="survay0" value="3" />
+            </span>
+            <span class="cell survaysname1">
+                <input type="radio" name="survay0" value="4" />
+            </span>
+            <span class="cell survaysname1">
+                <input type="radio" name="survay0" value="5" />
+            </span>
+            </div>
+        </div>
+    </div>
+    </fieldset>
+    <br>
+    <br>
+    
+    
+ <!-------------문항-------------->   
+ <p class='cell5'><script>document.write(number,'.'); number +=1;</script></p>
+ <span class="cell3 ">인체에 관한 연구와 질병의 예방 및 치료를 연구해보고 싶다.</span>
+ <span class="cell6"></span>
+ <span class="cell4 ">교육활동과 그에 관련된 현상들도 종합적으로 연구해보고 싶다.</span>
+ <br>
+ <br>
+ <br>
+ <div class="table">
+     <div class="row">
+         <span class="cell2 survaysname1">
+             <div class="p1">왼쪽이 아주 좋다</div>
+             <input type="radio" name="survay1" value="1" /></label>
+         </span>
+         <span class="cell2 survaysname1" >
+             <div class="p1">왼쪽이 좋다</div>
+             <input type="radio" name="survay1" value="2" />
+         </span>
+         <span class="cell2 survaysname1" >
+             <div class="p1">비슷하다</div>
+             <input type="radio" name="survay1" value="3" />
+         </span>
+         <span class="cell2 survaysname1" >
+             <div class="p1">오른쪽이 좋다</div>
+             <input type="radio" name="survay1" value="4" />
+         </span>
+         <span class="cell2 survaysname1" >
+             <div class="p1">오른쪽이 아주 좋다</div>
+             <input type="radio" name="survay1" value="5" />
+         </span>
+        </div>
+         </div>
+     <br>
+     <br>
+
+     <p class='cell5'><script>document.write(number,'.'); number +=1;</script></p>
+     <span class="cell3 ">사회변화를 분석하고 대안을 제시할 수 있는 능력을 갖추고 싶다.</span>
+     <span class="cell6"></span>
+     <span class="cell4 ">인간 신체를 연구하고 질병의 예방과 치료법 또는 의약품에 대해 체계적인 공부를 해보고 싶다.</span>
+     <br>
+     <br>
+     <br>
+     <div class="table">
+         <div class="row">
+             <span class="cell2 survaysname1">
+                 <div class="p1">왼쪽이 아주 좋다</div>
+                 <input type="radio" name="survay2" value="1" /></label>
+             </span>
+             <span class="cell2 survaysname1" >
+                 <div class="p1">왼쪽이 좋다</div>
+                 <input type="radio" name="survay2" value="2" />
+             </span>
+             <span class="cell2 survaysname1" >
+                 <div class="p1">비슷하다</div>
+                 <input type="radio" name="survay2" value="3" />
+             </span>
+             <span class="cell2 survaysname1" >
+                 <div class="p1">오른쪽이 좋다</div>
+                 <input type="radio" name="survay2" value="4" />
+             </span>
+             <span class="cell2 survaysname1" >
+                 <div class="p1">오른쪽이 아주 좋다</div>
+                 <input type="radio" name="survay2" value="5" />
+             </span>
+                 </div>
+             </div>
+         <br>
+         <br>
+
+         <p class='cell5'><script>document.write(number,'.'); number +=1;</script></p>
+ <span class="cell3 ">교육에 관한 이론과 교육활동의 원리를 배우고 활용해보고 싶다.</span>
+ <span class="cell6"></span>
+ <span class="cell4 ">건강을 유지, 증진, 회복하도록 돕는 전문적인 지식을 배우고 싶다.</span>
+ <br>
+ <br>
+ <br>
+ <div class="table">
+     <div class="row">
+         <span class="cell2 survaysname1">
+             <div class="p1">왼쪽이 아주 좋다</div>
+             <input type="radio" name="survay3" value="1" /></label>
+         </span>
+         <span class="cell2 survaysname1" >
+             <div class="p1">왼쪽이 좋다</div>
+             <input type="radio" name="survay3" value="2" />
+         </span>
+         <span class="cell2 survaysname1" >
+             <div class="p1">비슷하다</div>
+             <input type="radio" name="survay3" value="3" />
+         </span>
+         <span class="cell2 survaysname1" >
+             <div class="p1">오른쪽이 좋다</div>
+             <input type="radio" name="survay3" value="4" />
+         </span>
+         <span class="cell2 survaysname1" >
+             <div class="p1">오른쪽이 아주 좋다</div>
+             <input type="radio" name="survay3" value="5" />
+         </span>
+             </div>
+         </div>
+     <br>
+<div class="flexbox1">
+<button type="button" class="survay-btn" onclick="previous_Page(2, 3, number-6)">이전</button>
+<button type="button" class="survay-btn" onclick=" next_Page(2, count, number)">다음</button>
+</div>
+</body>
+</html>
