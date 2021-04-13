@@ -13,6 +13,7 @@ function paintToDo(text) {
     // 이모지 : 윈도우키 + 세미콜론
     delBtn.innerText = "❌";
     span.innerText = text;
+    // appendChild는 새로운 노드를 해당 노드의 자식 노드 리스트(child node list)의 맨 끝에 추가
     li.appendChild(span);
     li.appendChild(delBtn);
     toDoList.appendChild(li);
