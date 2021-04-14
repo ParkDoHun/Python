@@ -5,18 +5,32 @@ const toDoList = document.querySelector('.js-toDoList');
 // LocalStorage
 const TODOS_LS = 'toDos';
 
+const toDos = [];
+
+function saveToDos() {
+    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+}
+
 function paintToDo(text) {
     const li = document.createElement('li');
     const delBtn = document.createElement('button');
     const span = document.createElement('span');
+    const newId = toDos.length + 1;
 
     // 이모지 : 윈도우키 + 세미콜론
     delBtn.innerText = "❌";
     span.innerText = text;
-    // appendChild는 새로운 노드를 해당 노드의 자식 노드 리스트(child node list)의 맨 끝에 추가
     li.appendChild(span);
     li.appendChild(delBtn);
+    li.id = newId;
     toDoList.appendChild(li);
+
+    const toDoObj = {
+        text: text,
+        id: newId
+    };
+    toDos.push(toDoObj);
+    saveToDos();
 }
 
 function handleSubmit(event) {
@@ -28,9 +42,14 @@ function handleSubmit(event) {
 }
 
 function loadToDos() {
-    const toDos = localStorage.getItem(TODOS_LS);
-    if(toDos !== null) {
-        
+    const loadedToDos = localStorage.getItem(TODOS_LS);
+    if(loadedToDos !== null) {
+        // JSON : JavaScript Object Notarion, 객체 문법으로 구조화된 데이터를 표현하기 위한 문자 기반의 표준 포맷
+        const parsedToDos = JSON.parse(loadedToDos);
+        // forEach는 배열 안에 있는 것을 한번씩 실행
+            parsedToDos.forEach(function(toDo) {
+                paintToDo(toDo.text);
+            });
     } 
 }
 
