@@ -1,0 +1,38 @@
+<!-- Prototype chain : 생성자 함수로 생성된 객체의 프로토타입 체인 -->
+<script>
+    // 함수 표현식으로 함수를 정의할 때 함수 리터럴 방식을 사용
+    var square = function (number) {
+        return nember * number;
+    };
+    // 함수선언식의 경우 자바스크립트 엔진이 내부적으로 기명 함수표현식으로 변환
+    var square1 = function(number) {
+        return number * number;
+    };
+    /*
+    결국 함수선언식, 함수표현식 모두 함수 리터럴 방식을 사용한다. 
+    함수 리터럴 방식은 Function() 생성자 함수로 함수를 생성하는 것을 단순화 시킨 것이다.
+    
+    어떠한 방식으로 함수 객체를 생성하여도 모든 함수 객체의 prototype 객체는 Function.prototype이다. 
+    생성자 함수도 함수 객체이므로 생성자 함수의 prototype 객체는 Function.prototype이다.
+    */
+
+    function Person(name, gender) {
+        this.name = name;
+        this.gender = gender;
+        this.sayHello = function () {
+            console.log('Hi! my name is ' + this.name);
+        };
+    };
+
+    var foo = new Person('Park', 'male');
+
+    console.dir(Person);    // ƒ Person(name, gender) {
+    console.dir(foo);       // Person {name: 'Park', gender: 'male', sayHello: ƒ}
+
+    console.log(foo.__proto__ === Person.prototype);                // true
+    console.log(Person.prototype.__proto__ === Object.prototype);   // true
+    console.log(Person.prototype.constructor === Person);           // true
+    console.log(Person.__proto__ === Function.prototype);           // true
+    console.log(Function.prototype.__proto__ === Object.prototype); // true
+
+</script>
