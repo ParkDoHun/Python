@@ -5,7 +5,19 @@ const toDoList = document.querySelector('.js-toDoList');
 // LocalStorage
 const TODOS_LS = 'toDos';
 
-const toDos = [];
+let toDos = [];
+
+// 리스트 삭제
+function deleteToDo(event) {
+    const btn = event.target;
+    const li = btn.parentNode;
+    toDoList.removeChild(li);
+    const cleanToDos = toDos.filter(function(toDo) {
+        return toDo.id !== parseInt(li.id);
+    });
+    toDos = cleanToDos;
+    saveToDos();
+}
 
 function saveToDos() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
@@ -19,6 +31,7 @@ function paintToDo(text) {
 
     // 이모지 : 윈도우키 + 세미콜론
     delBtn.innerText = "❌";
+    delBtn.addEventListener('click', deleteToDo);
     span.innerText = text;
     li.appendChild(span);
     li.appendChild(delBtn);
