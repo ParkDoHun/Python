@@ -1,0 +1,17 @@
+<!-- 원시 타입(Primitive data type)의 확장 -->
+<script>
+    // 자바스크립트에서 원시 타입(숫자, 문자열, boolean, null, undefined)을 제외한 모든것은 객체이다.
+    var str = 'test';
+    console.log(typeof str);                    // string
+    console.log(str.constructor === String);    // true
+    console.log(str);                           // test
+
+    var strObj = new String('test');
+    console.log(typeof strObj);                 // object
+    console.log(strObj.constructor === String); // true
+    console.log(strObj);
+    // {0: "t", 1: "e", 2: "s", 3: "t", length: 4, [[PrimitiveValue]]: 'test', __proto__: String}
+
+    console.log(str.toUpperCase());             // TEST
+    console.log(strObj.toUpperCase());          // TEST        
+</script>
