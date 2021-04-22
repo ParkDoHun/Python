@@ -1,0 +1,13 @@
+<!-- 원시 타입(Primitive data type)의 확장 -->
+<script>
+    //  String 객체의 프로토타입 객체 String.prototype에 메소드를 추가하면 원시 타입, 객체 모두 메소드를 사용할 수 있다.
+    var str = 'test';
+
+    String.prototype.myMethod = function () {
+        return 'myMethod';
+    };
+
+    console.log(str.myMethod());        // myMethod
+    console.log('string'.myMethod());   // myMethod
+    console.dir(String.prototype);
+</script>
