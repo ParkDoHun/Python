@@ -1,0 +1,18 @@
+<!-- 원시 타입(Primitive data type)의 확장 -->
+<script>
+    // 자바스크립트는 표준 내장 객체의 프로토타입 객체에 개발자가 정의한 메소드의 추가를 허용한다.
+    var str = 'test';
+
+    String.prototype.myMethod = function() {
+        return 'myMethod';
+    }
+
+    console.log(str.myMethod());
+    console.dir(String.prototype);
+
+    console.log(str.__proto__ === String.prototype);                    // true
+    console.log(String.prototype.__proto__ === Object.prototype);       // true
+    console.log(String.prototype.constructor === String);               // true
+    console.log(String.__proto__ === Function.prototype);               // true
+    console.log(Function.prototype.__proto__ === Object.prototype);     // true
+</script>
