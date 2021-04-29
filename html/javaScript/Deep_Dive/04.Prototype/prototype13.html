@@ -1,0 +1,25 @@
+<!-- 프로토타입 객체의 변경 -->
+<script>
+    /*
+    객체를 생성할 때 프로토타입은 결정된다. 결정된 프로토타입 객체는 다른 임의의 객체로 변경할 수 있다.
+    이것은 부모 객체인 프로토타입을 동적으로 변경할 수 있다는 것을 의미한다.
+    이러한 특징을 활용하여 객체의 상속을 구현할 수 있다.
+    */
+
+    function Person(name) {
+        this.name = name;
+    }
+    
+    var foo = new Person('Park');
+
+    // 프로토타입 객체의 변경
+    Person.prototype = { gender: 'male' };
+
+    var bar = new Person('Kim');
+
+    console.log(foo.gender); // undefined
+    console.log(bar.gender); // male
+
+    console.log(foo.constructor); // ƒ Person(name)
+    console.log(bar.constructor); // ƒ Object()
+</script>
