@@ -1,0 +1,17 @@
+<!-- 1. 함수 호출 -->
+<script>
+    /*
+    전역객체는 전역 스코프(Global Scope)를 갖는 전역변수(Global variable)를 프로퍼티로 소유한다.
+    글로벌 영역에 선언한 함수는 전역객체의 프로퍼티로 접근할 수 있는 전역 변수의 메소드이다.
+    */
+
+    var ga = 'Global variable';
+
+    console.log(ga);        // Global variable
+    console.log(window.ga); // Global variable
+
+    function foo() {
+      console.log('invoked!'); // invoked!
+    }
+    window.foo();
+</script>
