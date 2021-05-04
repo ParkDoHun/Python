@@ -1,0 +1,15 @@
+<!-- 1.함수호출 -->
+<script>
+    /*
+    기본적으로 this는 전역객체(Global object)에 바인딩된다.
+    전역함수는 물론이고 심지어 내부함수의 경우도 this는 외부함수가 아닌 전역객체에 바인딩된다.
+    */
+    function foo(){
+        console.log("foo's this: ", this);      // window
+        function bar() {
+            console.log("bar's this: ", this);  // window
+        }
+        bar();
+    }
+    foo();
+</script>
