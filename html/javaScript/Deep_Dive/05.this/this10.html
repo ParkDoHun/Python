@@ -1,0 +1,14 @@
+<!-- 3. 생성자 함수 호출 -->
+<script>
+    // 생성자 함수
+function Person(name) {
+  this.name = name;
+}
+
+var me = new Person('Park');
+console.log(me); // Person{name: "Park"}
+
+// new 연산자와 함께 생성자 함수를 호출하지 않으면 생성자 함수로 동작하지 않는다.
+var you = Person('Kim');
+console.log(you); // undefined
+</script>

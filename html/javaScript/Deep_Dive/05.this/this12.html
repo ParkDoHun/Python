@@ -1,0 +1,22 @@
+<!-- 3.2 객체 리터럴 방식과 생성자 함수 방식의 차이 -->
+<script>
+    // 객체 리터럴 방식
+    var foo = {
+      name: 'foo',
+      gender: 'male'
+    }
+
+    console.dir(foo);   // {name: 'foo', gender: 'male'}
+
+    // 생성자 함수 방식
+    function Person(name, gender) {
+      this.name = name;
+      this.gender = gender;
+    }
+
+    var me  = new Person('Park', 'male');
+    console.dir(me);        // Person {name: 'Park', gender: 'male'}
+
+    var you = new Person('Kim', 'female');
+    console.dir(you);   // Person {name: 'Kim', gender: 'female'}
+</script>
