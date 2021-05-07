@@ -5,6 +5,7 @@
   </button>
 
 <style>
+/* 폰트 설정 */
 @font-face {
   font-family: Cyber;
   src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
@@ -38,8 +39,9 @@ body {
   --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
   --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
   --border: 4px;
-  /*버튼 글리치 효과 폴리곤 좌표*/
   --shimmy-distance: 5;
+
+ /*버튼 글리치 효과 폴리곤 좌표*/
   --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
   --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
   --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
@@ -109,8 +111,8 @@ body {
   text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
   clip-path: var(--clip);
   /*transform: translate(0, 100%);*/
-  animation: glitch 2s infinite;   /*글리치 효과 애니메이션 재생시간 : 느리게 20초*/
-  display: none; /*hover chapter 액션 없이 자동 애니메이션 재생 none*/
+  animation: glitch 2s infinite;   /* 글리치 효과 애니메이션 재생시간 : 2초*/
+  display: none; /* 디스플레이 none */
 }
 
 .cybr-btn:hover .cybr-btn__glitch {
@@ -129,6 +131,7 @@ body {
   z-index: -1;
 }
 
+/* 퍼센트에 따른 진행도 */
 /*키프레임 글리치*/
 @keyframes glitch {
   0% {
