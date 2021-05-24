@@ -1,0 +1,35 @@
+<!-- 전역 변수의 사용 억제 -->
+<!-- 버튼이 클릭될 때마다 클릭한 횟수가 누적되어 화면에 표시되는 카운터 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closure</title>
+</head>
+<body>
+    <p>전역 변수를 사용한 Counting</p>
+    <button id="inclease">+</button>
+    <p id="count">0</p>
+    <script>
+        var incleaseBtn = document.getElementById('inclease');
+        var count = document.getElementById('count');
+
+        // 카운트 상태를 유지하기 위한 전역 변수
+        var counter = 0;
+
+        function increase() {
+            return ++counter;
+        }
+
+        incleaseBtn.onclick = function() {
+            count.innerHTML = increase();
+        }
+
+        /*
+         increase 함수는 호출되기 직전에 전역변수 counter의 값이 반드시 0이여야 제대로 동작한다.
+         하지만 변수 counter는 전역 변수이기 때문에 언제든지 누구나 접근할 수 있고 변경할 수 있다.
+         이는 의도치 않게 값이 변경될 수 있다는 것을 의미한다.
+        */
+    </script>
+</body>
+</html>
