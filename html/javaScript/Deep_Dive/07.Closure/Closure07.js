@@ -32,3 +32,13 @@ console.log(increaser()); // 2
 const decreaser = makeCounter(decrease);
 console.log(decreaser()); // -1
 console.log(decreaser()); // -2
+
+
+
+
+/*
+
+변수 increaser와 변수 decreaser에 할당된 함수는 각각 자신만의 독립된 렉시컬 환경을 갖기 때문에 카운트를 유지하기 위한 자유 변수 counter를 공유하지 않아 카운터의 증감이 연동하지 않는다.
+따라서 독립된 카운터가 아니라 연동하여 증감이 가능한 카운터를 만들려면 렉시컬 환경을 공유하는 클로저를 만들어야 한다.
+
+*/
